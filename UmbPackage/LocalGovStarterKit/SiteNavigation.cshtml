@@ -1,0 +1,36 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@{
+    bool showHomeNode = false; // don't show home in the menu
+
+    Dictionary<string, string> selection = new Dictionary<string, string>();
+
+    var siteRoot = Model.Content.AncestorOrSelf(1); // gets top level of the tree from here 
+
+    if (showHomeNode)
+    {
+        selection.Add("/", siteRoot.GetPropertyValue<string>("sectionName", siteRoot.Name));
+    }
+
+    string currentUrl = Model.Content.Url;
+
+    string currentRoot = currentUrl.Substring(0, currentUrl.IndexOf('/', 1) + 1);
+    
+    foreach(var item in siteRoot.Children()
+        .Where(x => x.IsVisible() && x.DocumentTypeAlias == "SectionHomepage"))
+    {
+        selection.Add(item.Url, item.GetPropertyValue<string>("sectionName", item.Name));
+    }
+    
+    if (!selection.ContainsKey(currentRoot))
+    {
+        currentRoot = "/";
+    }
+}
+
+@foreach(var menuItem in selection)
+{
+    <li class="@Umbraco.If(menuItem.Key == currentRoot, "active")">
+        <a href="@menuItem.Key" class="@menuItem.Key.Trim("/")">@menuItem.Value</a>
+    </li>
+}

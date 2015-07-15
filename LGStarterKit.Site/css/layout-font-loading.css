@@ -1,0 +1,17 @@
+﻿/* 
+    this stylesheet exists because we are using the google font loader 
+    -
+    We are only using hte font loaded so that the font's won't block the
+    site when you have no internet connection. 
+
+    this is so you can present the site on a standalone pc. 
+
+    for a production site, i would use the <link href=... method to load
+    a font, and not use this stylesheet. 
+
+    this stylesheet, set's widths of things so that the font' flick doesn't
+    cause the site to move around. - because that annoy's me.
+
+*/
+
+.navbar-header { width: 220px; }

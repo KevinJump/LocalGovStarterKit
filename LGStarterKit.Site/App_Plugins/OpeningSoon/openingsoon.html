@@ -1,0 +1,37 @@
+<div ng-controller="Jumoo.OpeningSoonController">
+
+	<table ng-model="model.value" class="table-jumoo-opening">
+		<tbody>
+			<tr ng-repeat="day in model.value" class="jumoo-opening-entry">
+				<td>{{day.name}}</td>
+				<td><input type="checkbox" id="day-{{$index + 1}}" ng-model="day.scheduled"></td>
+				
+				<td ng-show="day.scheduled">
+					<input type="text" time-picker ng-model="day.open" class="jumoo-opening-time">
+					<span class="jumoo-inline-label"><localize key="openingsoon_until">until</localize></span>
+					<input type="text" time-picker ng-model="day.close" class="jumoo-opening-time">
+				</td>
+				<td ng-show="!day.scheduled" class="jumoo-opening-notscheduled">
+					<localize key="openingsoon_notScheduled">not scheduled</localize>
+				</td>
+				
+				<td ng-show="model.config.SecondSet != 0 && day.scheduled"> <localize key="openingsoon_and">and</localize> </td>
+				<td ng-show="model.config.SecondSet != 0 && day.scheduled">
+					<input type="text" time-picker ng-model="day.open2" class="jumoo-opening-time">
+					<span class="jumoo-inline-label"><localize key="openingsoon_until">until</localize></span>
+					<input type="text" time-picker ng-model="day.close2" class="jumoo-opening-time">
+				</td>
+				</div>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="2"></td>
+				<td>
+					<a ng-show="model.config.enableClear" ng-click="clearAll()" class="btn"><localize key="openingsoon_clearAll">clear all</localize></a>
+					<a ng-show="model.config.enableAutofill" ng-click="autofill()" class="btn"><localize key="openingsoon_autofill">Autofill</localize></a>
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+</div>

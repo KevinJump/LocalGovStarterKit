@@ -1,0 +1,16 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using Newtonsoft.Json.Linq
+
+@if (Model.Content.GetPropertyValue<string>("footerLinks", true, "").Length > 2)
+{ 
+    <ul class="footer-links list-inline">
+        @foreach (var item in Model.Content.GetPropertyValue<JArray>("footerLinks", true))
+        {
+            var linkUrl = (item.Value<bool>("isInternal")) ? Umbraco.NiceUrl(item.Value<int>("internal")) : item.Value<string>("link");
+            var linkTarget = item.Value<bool>("newWindow") ? "_blank" : null;
+
+            <li><a href="@linkUrl" target="@linkTarget">@(item.Value<string>("caption"))</a></li>
+        }
+    </ul>
+}
+

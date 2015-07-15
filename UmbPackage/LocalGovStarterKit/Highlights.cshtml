@@ -1,0 +1,20 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using Newtonsoft.Json.Linq
+
+@{
+    if (Model.Content.HasValue("highlights") && Model.Content.GetPropertyValue<string>("highlights").Length > 2)
+    {
+        <h2>@Model.Content.GetPropertyValue("highlightsTitle", "Highlights")</h2>
+    
+        <ul>
+            @foreach (var item in Model.Content.GetPropertyValue<JArray>("highlights"))
+            {
+                var linkUrl = (item.Value<bool>("isInternal")) ? Umbraco.NiceUrl(item.Value<int>("internal")) : item.Value<string>("link");
+                var linkTarget = item.Value<bool>("newWindow") ? "_blank" : null;
+
+                <li><a href="@linkUrl" target="@linkTarget">@(item.Value<string>("caption"))</a></li>
+            }
+        </ul>
+    }
+}
+

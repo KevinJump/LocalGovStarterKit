@@ -1,0 +1,16 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "SideNavPages.cshtml";
+}
+
+<h2 class="page-header">@Umbraco.Field("title")</h2>
+@Html.Partial("Page/DisplayItemDateRange")
+
+<img src="@Model.Content.GetCropUrl("featuredImage", "Featured")" class="item-image"/>
+
+@Umbraco.Field("bodyText")
+
+@section FullSideNav {
+    <!-- full side nav - overrides parent sidenav.-->
+    @Html.Partial("Nav/LatestItems")
+}

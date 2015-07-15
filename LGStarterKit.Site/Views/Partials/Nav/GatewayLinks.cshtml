@@ -1,0 +1,82 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@{
+    int mainCount;
+    if (ViewData["mainCount"] == null 
+        || !int.TryParse(ViewData["mainCount"].ToString(), out mainCount) 
+        || mainCount == 0 )
+    {
+        mainCount = 6;
+    }
+    
+    
+    string mainName = (string)ViewData["mainName"] ?? Umbraco.GetDictionaryValue("Gateway.Main");
+    string moreName = (string)ViewData["moreName"] ?? Umbraco.GetDictionaryValue("Gateway.More");
+
+    var selection = Model.Content.Children()
+        .Where(x => x.IsVisible() && !x.HasProperty("isComponent") && x.DocumentTypeAlias != "SectionHomepage");
+}
+
+@if (selection.Any())
+{
+    @DisplaySectionTitle(mainName)
+    
+    <div class="row">
+        @foreach(var item in selection.Take(mainCount))
+        {
+            <div class="col-lg-4 col-sm-6">
+                <div class="gateway-item">
+                    <h3 class="gateway-title">
+                        <a class="gateway-link" href="@item.Url">
+                            @item.GetPropertyValue("title", item.Name)
+                        </a>
+                    </h3>
+                    <div class="gateway-text">
+                        @item.GetPropertyValue("pageSummary")
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    
+    if (selection.Count() > mainCount)
+    {
+        @DisplaySectionTitle(moreName)
+    
+        <div class="row">
+            <div class="col-xs-12">
+                <ul class="nav nav-pills gateway-more">
+                    @foreach(var item in selection.Skip(mainCount))
+                    {
+                        <li>
+                            <a href="@item.Url">@item.GetPropertyValue("title", item.Name)</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    }
+}
+else
+{
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="alert alert-info">
+                <span class="glyphicon glyphicon-th"></span>
+                Looks like there is nothing here, try adding some content
+            </div>
+        </div>
+    </div>
+}
+
+@helper DisplaySectionTitle(string sectionName)
+{
+    if( !string.IsNullOrWhiteSpace(sectionName))
+    {
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>@sectionName</h2>
+            </div>
+        </div>
+    }
+}

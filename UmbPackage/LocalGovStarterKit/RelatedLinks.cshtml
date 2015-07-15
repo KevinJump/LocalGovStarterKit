@@ -1,0 +1,22 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using Newtonsoft.Json.Linq
+@{
+    if (Model.Content.HasValue("relatedItems") && Model.Content.GetPropertyValue<string>("relatedItems").Length > 2)
+    {
+        <div class="section-nav">
+            <h2 class="page-header">Related Items</h2>
+
+            <ul class="nav nav-stacked nav-pills">
+                @foreach (var item in Model.Content.GetPropertyValue<JArray>("relatedItems"))
+                {
+                    var linkUrl = (item.Value<bool>("isInternal")) ? Umbraco.NiceUrl(item.Value<int>("internal")) : item.Value<string>("link");
+                    var linkTarget = item.Value<bool>("newWindow") ? "_blank" : null;
+                    
+                    <li><a href="@linkUrl" target="@linkTarget">@(item.Value<string>("caption"))</a></li>
+                }
+            </ul>
+        </div>
+    }
+}
+         
+            

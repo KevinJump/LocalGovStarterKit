@@ -1,0 +1,14 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "SiteDesign.cshtml";
+}
+
+<div class="row">
+	<div class="col-xs-12">
+		
+		<h1 class="page-header">@Umbraco.Field("title")</h1>
+		@Umbraco.Field("bodyText")
+		
+		@RenderBody()
+	</div>
+</div>

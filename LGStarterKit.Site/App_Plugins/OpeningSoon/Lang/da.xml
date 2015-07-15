@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<language>
+  <area alias="openingsoon">
+    <key alias="monday">Mandag</key>
+    <key alias="tuesday">Tirsdag</key>
+    <key alias="wednesday">Onsdag</key>
+    <key alias="thursday">Torsdag</key>
+    <key alias="friday">Fredag</key>
+    <key alias="saturday">Lørdag</key>
+    <key alias="sunday">Søndag</key>
+    <key alias="until">indtil</key>
+    <key alias="and">og</key>
+    <key alias="notScheduled">ikke angivet</key>
+    <key alias="clearAll">Ryd alt</key>
+    <key alias="autofill">Autofyld</key>
+  </area>
+</language>

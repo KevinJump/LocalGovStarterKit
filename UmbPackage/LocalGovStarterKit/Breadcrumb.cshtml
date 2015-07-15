@@ -1,0 +1,24 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@{
+    var selection = Model.Content.Ancestors();
+}
+
+@if( selection.Any() )
+{
+    <ul class="breadcrumb">
+        @foreach(var item in selection.OrderBy("Level"))
+        {
+            if (item.IsVisible())
+            {
+                <li>
+                    <a href="@item.Url">@item.GetPropertyValue("title", item.Name)</a>
+                </li>
+            }
+        }
+
+        <li class="active">
+            @Model.Content.GetPropertyValue("title", Model.Content.Name)
+        </li>
+    </ul>
+}
