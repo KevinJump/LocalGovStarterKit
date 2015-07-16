@@ -291,7 +291,8 @@
       <guid>Web.config</guid>
       <orgPath>/Views</orgPath>
       <orgName>Web.config</orgName>
-    </file> -->
+    </file>
+	-->
     <file>
       <guid>ezSearch.cshtml</guid>
       <orgPath>/Views/MacroPartials</orgPath>
@@ -352,8 +353,7 @@
       <guid>Textstring.cshtml</guid>
       <orgPath>/Views/Partials/Grid/Editors</orgPath>
       <orgName>Textstring.cshtml</orgName>
-    </file>
-	-->
+    </file> -->
     <file>
       <guid>Events.cshtml</guid>
       <orgPath>/Views/Partials/Homepage</orgPath>
@@ -410,7 +410,7 @@
       <orgName>SectionNav.cshtml</orgName>
     </file>
     <file>
-      <guid>5f009279-684f-4eae-b6a8-788085b72223_Sitemap.cshtml</guid>
+      <guid>54973571-eac4-4ef8-a9b5-352625b026b9_Sitemap.cshtml</guid>
       <orgPath>/Views/Partials/Nav</orgPath>
       <orgName>Sitemap.cshtml</orgName>
     </file>
@@ -470,9 +470,9 @@
       <orgName>AngularGoogleMaps.dll</orgName>
     </file>
     <file>
-      <guid>dscf9541.jpg</guid>
+      <guid>bridgecropped.jpg</guid>
       <orgPath>/media/1003</orgPath>
-      <orgName>dscf9541.jpg</orgName>
+      <orgName>bridgecropped.jpg</orgName>
     </file>
     <file>
       <guid>25th-may-04-1.jpg</guid>
@@ -484,12 +484,6 @@
       <orgPath>/media/1001</orgPath>
       <orgName>09apr-027.jpg</orgName>
     </file>
-	<!--
-    <file>
-      <guid>33df32b2-c94c-4060-b674-14975a4f4f3f_dashboard.ascx</guid>
-      <orgPath>/App_Plugins/StarterKitDashboard</orgPath>
-      <orgName>dashboard.ascx</orgName>
-    </file> -->
   </files>
   <info>
     <package>
@@ -508,11 +502,11 @@
       <website>http://jumoo.uk</website>
     </author>
     <readme><![CDATA[ LocalGov StarterKit 5 (Beta.1)
-========================
+===========================
 A starter kit for service driven websites.
 Comes with settings for content, navigation, news, events and contact management. and you can even import existing navigation structures (like the LGNL)
 
-For best results install on a clean install of umbraco 7.2+
+For best results install on a clean install of umbraco 7.2.6
 
 ]]></readme>
   </info>
@@ -1677,7 +1671,7 @@ For best results install on a clean install of umbraco 7.2+
 @{
     Layout = "Master.cshtml";
 
-    Html.RequiresCss("//fonts.googleapis.com/css?family=Ubuntu:400,500,700|Open+Sans:700,400");
+    Html.RequiresCss("//fonts.googleapis.com/css?family=Ubuntu:400,500,700|Open+Sans:700,400|Pacifico:400");
     Html.RequiresCss("~/css/layout.css");
 
     Html.RequiresCss("~/css/" + Umbraco.Field("sectionStyle", recursive: true));
@@ -9701,6 +9695,8 @@ footer .site-credit { font-size: 0.75em; color: #9e9e9e; }
     border-bottom: 1px solid #f1f1f1;
 
 }
+
+.btn a { color: #fff; }
 ]]></Content>
     </Stylesheet>
   </Stylesheets>

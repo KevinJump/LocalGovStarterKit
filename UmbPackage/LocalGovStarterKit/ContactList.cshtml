@@ -13,7 +13,7 @@
             if (contactItem != null)
             {
                 <div class="section-nav">
-                    <h2 class="page-header">Contact Details</h2>
+                    <h2 class="page-header">Contact Us</h2>
                     <ul class="nav nav-stacked nav-pills">
 
                         @if (contactItem.HasValue("telephoneNumber"))
@@ -28,7 +28,7 @@
                         {
                             <li>
                                 <a href="@contactItem.Url#email">
-                                    <span class="glyphicon glyphicon-asterisk"></span> Email</a>
+                                    <span class="glyphicon glyphicon-envelope"></span> Email</a>
                             </li>
                         }
 
@@ -36,7 +36,7 @@
                         {
                             <li>
                                 <a href="@contactItem.Url#address">
-                                    <span class="glyphicon glyphicon-envelope"></span> Address</a>
+                                    <span class="glyphicon glyphicon-paperclip"></span> Address</a>
                             </li>
                         }
                     </ul>

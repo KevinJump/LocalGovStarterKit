@@ -5,13 +5,14 @@
   <bodyText><![CDATA[<p>Welcome to the LocalGov StarterKit for umbraco, have a look around and see how you could use umbraco to build your own site.</p>]]></bodyText>
   <pageSummary></pageSummary>
   <serviceAlerts></serviceAlerts>
+  <esdServiceId></esdServiceId>
   <sectionName><![CDATA[Home]]></sectionName>
   <highlights><![CDATA[[
   {
     "caption": "Starter Kit Help",
-    "link": 8b40d7c0-e98e-49c7-bed3-b1dafd92faf7,
+    "link": 8B40D7C0-E98E-49C7-BED3-B1DAFD92FAF7,
     "newWindow": false,
-    "internal": 8b40d7c0-e98e-49c7-bed3-b1dafd92faf7,
+    "internal": 8B40D7C0-E98E-49C7-BED3-B1DAFD92FAF7,
     "edit": false,
     "isInternal": true,
     "internalName": "Help",
@@ -20,9 +21,9 @@
   },
   {
     "caption": "Example Content",
-    "link": 943e121f-acfb-4c5f-be60-1d0a5443e52d,
+    "link": 943E121F-ACFB-4C5F-BE60-1D0A5443E52D,
     "newWindow": false,
-    "internal": 943e121f-acfb-4c5f-be60-1d0a5443e52d,
+    "internal": 943E121F-ACFB-4C5F-BE60-1D0A5443E52D,
     "edit": false,
     "isInternal": true,
     "internalName": "Example",
@@ -31,9 +32,9 @@
   },
   {
     "caption": "News",
-    "link": 44e07320-c9b4-4426-b52f-0db2430f53a9,
+    "link": 44E07320-C9B4-4426-B52F-0DB2430F53A9,
     "newWindow": false,
-    "internal": 44e07320-c9b4-4426-b52f-0db2430f53a9,
+    "internal": 44E07320-C9B4-4426-B52F-0DB2430F53A9,
     "edit": false,
     "isInternal": true,
     "internalName": "News",
@@ -48,9 +49,9 @@
   <footerLinks><![CDATA[[
   {
     "caption": "Privacy Policy",
-    "link": a8e2eba1-ea79-4a09-a4e0-ffff908456b8,
+    "link": A8E2EBA1-EA79-4A09-A4E0-FFFF908456B8,
     "newWindow": false,
-    "internal": a8e2eba1-ea79-4a09-a4e0-ffff908456b8,
+    "internal": A8E2EBA1-EA79-4A09-A4E0-FFFF908456B8,
     "edit": false,
     "isInternal": true,
     "internalName": "Privacy",
@@ -59,9 +60,9 @@
   },
   {
     "caption": "Cookies",
-    "link": 8f147f03-1584-4d12-a939-395da6893642,
+    "link": 8F147F03-1584-4D12-A939-395DA6893642,
     "newWindow": false,
-    "internal": 8f147f03-1584-4d12-a939-395da6893642,
+    "internal": 8F147F03-1584-4D12-A939-395DA6893642,
     "edit": false,
     "isInternal": true,
     "internalName": "Cookies",
@@ -70,9 +71,9 @@
   },
   {
     "caption": "Accessbility",
-    "link": 29655227-8377-48c1-94a0-393db8d98fd6,
+    "link": 29655227-8377-48C1-94A0-393DB8D98FD6,
     "newWindow": false,
-    "internal": 29655227-8377-48c1-94a0-393db8d98fd6,
+    "internal": 29655227-8377-48C1-94A0-393DB8D98FD6,
     "edit": false,
     "isInternal": true,
     "internalName": "Accessibility",
@@ -81,9 +82,9 @@
   },
   {
     "caption": "Help",
-    "link": 8b40d7c0-e98e-49c7-bed3-b1dafd92faf7,
+    "link": 8B40D7C0-E98E-49C7-BED3-B1DAFD92FAF7,
     "newWindow": false,
-    "internal": 8b40d7c0-e98e-49c7-bed3-b1dafd92faf7,
+    "internal": 8B40D7C0-E98E-49C7-BED3-B1DAFD92FAF7,
     "edit": false,
     "isInternal": true,
     "internalName": "Help",
@@ -98,13 +99,14 @@
       <bodyText><![CDATA[<p>Welcome to the starterkit help section, whether you're a developer or you just want to edit content, we have a guide to help you understand how the starterkit has been structured.</p>]]></bodyText>
       <pageSummary></pageSummary>
       <serviceAlerts></serviceAlerts>
+      <esdServiceId></esdServiceId>
       <sectionName><![CDATA[Help]]></sectionName>
       <highlights><![CDATA[[
   {
     "caption": "What's New",
-    "link": 2507f6cf-551c-4b45-8dbf-c4e1ceafaee5,
+    "link": 2507F6CF-551C-4B45-8DBF-C4E1CEAFAEE5,
     "newWindow": false,
-    "internal": 2507f6cf-551c-4b45-8dbf-c4e1ceafaee5,
+    "internal": 2507F6CF-551C-4B45-8DBF-C4E1CEAFAEE5,
     "edit": false,
     "isInternal": true,
     "internalName": "New",
@@ -113,9 +115,9 @@
   },
   {
     "caption": "For Developers",
-    "link": 2b49c34c-e360-4be4-a54b-6529385c3fe7,
+    "link": 2B49C34C-E360-4BE4-A54B-6529385C3FE7,
     "newWindow": false,
-    "internal": 2b49c34c-e360-4be4-a54b-6529385c3fe7,
+    "internal": 2B49C34C-E360-4BE4-A54B-6529385C3FE7,
     "edit": false,
     "isInternal": true,
     "internalName": "Development",
@@ -124,9 +126,9 @@
   },
   {
     "caption": "For Content Editors",
-    "link": ac79a738-a76d-4beb-beb5-415c1711291e,
+    "link": AC79A738-A76D-4BEB-BEB5-415C1711291E,
     "newWindow": false,
-    "internal": ac79a738-a76d-4beb-beb5-415c1711291e,
+    "internal": AC79A738-A76D-4BEB-BEB5-415C1711291E,
     "edit": false,
     "isInternal": true,
     "internalName": "Content",
@@ -135,9 +137,9 @@
   },
   {
     "caption": "More Help",
-    "link": 20534785-c5a0-400a-983c-f8687c2c2910,
+    "link": 20534785-C5A0-400A-983C-F8687C2C2910,
     "newWindow": false,
-    "internal": 20534785-c5a0-400a-983c-f8687c2c2910,
+    "internal": 20534785-C5A0-400A-983C-F8687C2C2910,
     "edit": false,
     "isInternal": true,
     "internalName": "More",
@@ -153,7 +155,8 @@
           <title><![CDATA[Development]]></title>
           <bodyText><![CDATA[<p>All the bits around developing with the starter kit</p>]]></bodyText>
           <pageSummary><![CDATA[Help if you want to develop the starter kit further]]></pageSummary>
-          <serviceAlerts><![CDATA[7dd9a1e7-f6b0-460f-91d6-d6c6e97d9794]]></serviceAlerts>
+          <serviceAlerts><![CDATA[7DD9A1E7-F6B0-460F-91D6-D6C6E97D9794]]></serviceAlerts>
+          <esdServiceId></esdServiceId>
           <mainItemCount><![CDATA[7]]></mainItemCount>
           <Children>
             <ContentPage guid="3f572bca-920d-4b72-b609-97b3fe5a31ec" id="1094" nodeName="Templates" isDoc="" updated="2015-07-14T11:10:32.107Z" parentGUID="2b49c34c-e360-4be4-a54b-6529385c3fe7" nodeTypeAlias="ContentPage" templateAlias="ContentPage" sortOrder="0" published="true">
@@ -175,12 +178,13 @@
 <p> </p>]]></bodyText>
               <pageSummary><![CDATA[The templates for the starter kit define how the say it laid out and what elements are displayed on a page.]]></pageSummary>
               <serviceAlerts></serviceAlerts>
+              <esdServiceId></esdServiceId>
               <relatedItems><![CDATA[[
   {
     "caption": "Stylesheets",
-    "link": 5362a47c-245f-419e-a2c9-a131384f6077,
+    "link": 5362A47C-245F-419E-A2C9-A131384F6077,
     "newWindow": false,
-    "internal": 5362a47c-245f-419e-a2c9-a131384f6077,
+    "internal": 5362A47C-245F-419E-A2C9-A131384F6077,
     "edit": false,
     "isInternal": true,
     "internalName": "Stylesheets",
@@ -189,9 +193,9 @@
   },
   {
     "caption": "Partial Views",
-    "link": 7ffb03f3-64c9-4110-b529-e7e5a4518827,
+    "link": 7FFB03F3-64C9-4110-B529-E7E5A4518827,
     "newWindow": false,
-    "internal": 7ffb03f3-64c9-4110-b529-e7e5a4518827,
+    "internal": 7FFB03F3-64C9-4110-B529-E7E5A4518827,
     "edit": false,
     "isInternal": true,
     "internalName": "Partial Views",
@@ -200,9 +204,9 @@
   },
   {
     "caption": "Sections",
-    "link": ed3fd6df-7419-4dc3-9880-90e0c315891d,
+    "link": ED3FD6DF-7419-4DC3-9880-90E0C315891D,
     "newWindow": false,
-    "internal": ed3fd6df-7419-4dc3-9880-90e0c315891d,
+    "internal": ED3FD6DF-7419-4DC3-9880-90E0C315891D,
     "edit": false,
     "isInternal": true,
     "internalName": "Sections",
@@ -237,6 +241,7 @@
 <p> </p>]]></bodyText>
               <pageSummary><![CDATA[The starter kit is minimally styled so that it can be picked up and used without having to first unpick reams of css.]]></pageSummary>
               <serviceAlerts></serviceAlerts>
+              <esdServiceId></esdServiceId>
               <relatedItems></relatedItems>
               <contact></contact>
             </ContentPage>
@@ -257,6 +262,7 @@
 <h4><span class="alert alert-info"><span style="font-size: 12pt; line-height: 1.42857143;"><strong>GRID: </strong>The Grid folder contains the built in views to the Umbraco Grid, these are not part of the starter kit.</span><br /></span></h4>]]></bodyText>
               <pageSummary><![CDATA[Partial views let you define reusable chunks of a page, that you can then use right across your site]]></pageSummary>
               <serviceAlerts></serviceAlerts>
+              <esdServiceId></esdServiceId>
               <relatedItems></relatedItems>
               <contact></contact>
             </ContentPage>
@@ -272,6 +278,7 @@
 <p><span class="alert alert-info"><span style="font-size: 12pt; line-height: 1.42857143;">EzSearch: the ezsearch macro is part of the ezsearch package, that is included as part of the starter kit, and </span>controls<span style="font-size: 12pt; line-height: 1.42857143;"> the site search</span></span></p>]]></bodyText>
               <pageSummary><![CDATA[Macros are a lot like partial views, except they can also be used within the content editor environment]]></pageSummary>
               <serviceAlerts></serviceAlerts>
+              <esdServiceId></esdServiceId>
               <relatedItems></relatedItems>
               <contact></contact>
             </ContentPage>
@@ -286,21 +293,29 @@
 <p>This is part of the angular google maps package, and allows users to pick a location on a map, how the map looks when the user first loads it up is set up in this datatype.</p>]]></bodyText>
               <pageSummary><![CDATA[Data Types determine how the editor controls and enters content on the site.]]></pageSummary>
               <serviceAlerts></serviceAlerts>
+              <esdServiceId></esdServiceId>
               <relatedItems></relatedItems>
               <contact></contact>
             </ContentPage>
-            <ContentPage guid="6a24284f-2758-47eb-b2c0-114cae694592" id="1099" nodeName="Packages" isDoc="" updated="2015-07-14T11:38:39.847Z" parentGUID="2b49c34c-e360-4be4-a54b-6529385c3fe7" nodeTypeAlias="ContentPage" templateAlias="ContentPage" sortOrder="5" published="true">
+            <ContentPage guid="6a24284f-2758-47eb-b2c0-114cae694592" id="1099" nodeName="Packages" isDoc="" updated="2015-07-15T19:45:26.083Z" parentGUID="2b49c34c-e360-4be4-a54b-6529385c3fe7" nodeTypeAlias="ContentPage" templateAlias="ContentPage" sortOrder="5" published="true">
               <umbracoNaviHide>0</umbracoNaviHide>
               <title><![CDATA[Packages]]></title>
               <bodyText><![CDATA[<p>The localgov starter kit comes with some additional packages, all to make things work better</p>
 <h3>Opening Soon</h3>
+<p>[<a href="https://our.umbraco.org/projects/backoffice-extensions/openingsoon">https://our.umbraco.org/projects/backoffice-extensions/openingsoon</a>]</p>
 <p>Opening Times, lets the editor specify when somewhere is open or closed, then you can render nicely marked up html to display this to the user.</p>
 <h3>EzSearch</h3>
+<p>[<a href="https://our.umbraco.org/projects/website-utilities/ezsearch/">https://our.umbraco.org/projects/website-utilities/ezsearch/</a>]</p>
 <p>Provides the search elements of the site.</p>
 <h3>Angular Google Maps</h3>
-<p>Lets editors pick locations on a map. then stores them so you can display them on the site.</p>]]></bodyText>
+<p>[<a href="https://our.umbraco.org/projects/backoffice-extensions/angulargooglemaps">https://our.umbraco.org/projects/backoffice-extensions/angulargooglemaps</a>]</p>
+<p>Let's editors pick locations on a map. then stores them so you can display them on the site.</p>
+<h3>&amp; uSync</h3>
+<p>[<a href="https://our.umbraco.org/projects/developer-tools/usync">https://our.umbraco.org/projects/developer-tools/usync</a>]</p>
+<p>the starter kit also uses components of our developer syncing package uSync - uSync can be used to keep different versions of umbraco in sync, for the starter kit we use it to do the clever importing of content during the installation process. </p>]]></bodyText>
               <pageSummary><![CDATA[The localgov starter kit comes with some additional packages, all to make things work better]]></pageSummary>
               <serviceAlerts></serviceAlerts>
+              <esdServiceId></esdServiceId>
               <relatedItems></relatedItems>
               <contact></contact>
             </ContentPage>
@@ -322,6 +337,7 @@
 <p>We would say if you are doing anything clever with forms and umbraco you should look at umbraco forms. which is a paid for add on but makes things way simplier. </p>]]></bodyText>
               <pageSummary><![CDATA[The starter kit has little bits of code to make some custom behavior work]]></pageSummary>
               <serviceAlerts></serviceAlerts>
+              <esdServiceId></esdServiceId>
               <relatedItems></relatedItems>
               <contact></contact>
             </ContentPage>
@@ -333,6 +349,7 @@
           <bodyText><![CDATA[<p>Working with the content in the starter kit</p>]]></bodyText>
           <pageSummary><![CDATA[Working with the content in the starter kit]]></pageSummary>
           <serviceAlerts></serviceAlerts>
+          <esdServiceId></esdServiceId>
           <mainItemCount><![CDATA[7]]></mainItemCount>
           <Children>
             <ContentPage guid="24e028e9-e5dc-43e3-a8cc-4227ab10c639" id="1102" nodeName="Gateway Pages" isDoc="" updated="2015-07-10T20:37:40.917Z" parentGUID="ac79a738-a76d-4beb-beb5-415c1711291e" nodeTypeAlias="ContentPage" templateAlias="ContentPage" sortOrder="0" published="true">
@@ -351,6 +368,7 @@
 <p>when the user views the gateway page they will see the links like any other page, but when they click on a redirect they will be taken to that part of the site. redirects should be used with care, as they can be confusing to users if over used. </p>]]></bodyText>
               <pageSummary><![CDATA[Gateway Pages (like this) are navigational aids]]></pageSummary>
               <serviceAlerts></serviceAlerts>
+              <esdServiceId></esdServiceId>
               <relatedItems></relatedItems>
               <contact></contact>
             </ContentPage>
@@ -372,6 +390,7 @@
 <p> </p>]]></bodyText>
               <pageSummary><![CDATA[Content pages are the workhorses of the site, with the information people want on them]]></pageSummary>
               <serviceAlerts></serviceAlerts>
+              <esdServiceId></esdServiceId>
               <relatedItems></relatedItems>
               <contact></contact>
             </ContentPage>
@@ -383,6 +402,7 @@
 <p><span class="alert alert-info">In local government a good example of sections might be an About the council, section moving the democracy and policy making elements of the council into a separate section from the service delivery and giving people answers bits. </span></p>]]></bodyText>
               <pageSummary><![CDATA[Sections let you break your site into logical chunks]]></pageSummary>
               <serviceAlerts></serviceAlerts>
+              <esdServiceId></esdServiceId>
               <relatedItems></relatedItems>
               <contact></contact>
             </ContentPage>
@@ -390,7 +410,7 @@
               <umbracoNaviHide>0</umbracoNaviHide>
               <title><![CDATA[System pages]]></title>
               <bodyText><![CDATA[<p>The starter kit comes with a number of system pages, that perform the basic functions you might expect from a site, these include site search, site maps, and for all our localgov friends an AtoZ.</p>
-<p>Each system page, uses the System <a href="/{localLink:3f572bca-920d-4b72-b609-97b3fe5a31ec}" title="Templates">template</a> as a base, using their own <a href="/{localLink:7ffb03f3-64c9-4110-b529-e7e5a4518827}" title="Partial Views">custom partial view </a>to do their thing.</p>
+<p>Each system page, uses the System <a href="/{localLink:3F572BCA-920D-4B72-B609-97B3FE5A31EC}" title="Templates">template</a> as a base, using their own <a href="/{localLink:7FFB03F3-64C9-4110-B529-E7E5A4518827}" title="Partial Views">custom partial view </a>to do their thing.</p>
 <h3>Search</h3>
 <p>Search in the starter kit is provided by a slightly modified version of <a href="https://our.umbraco.org/projects/website-utilities/ezsearch">ezSearch</a>, which is using Umbraco's build in <a href="https://our.umbraco.org/documentation/Reference/Searching/Examine/">Examine Index</a>, built upon <a href="https://lucene.apache.org/">Lucene</a>.</p>
 <h3>Sitemap</h3>
@@ -400,6 +420,7 @@
 <p>The AtoZ has a custom Application Handler to build it's own Application Cache, and so the AtoZ is probably a good place to look if you are thinking about expanding your site beyond the standard features offered in Umbraco.</p>]]></bodyText>
               <pageSummary><![CDATA[Search, AtoZ's and the like]]></pageSummary>
               <serviceAlerts></serviceAlerts>
+              <esdServiceId></esdServiceId>
               <relatedItems></relatedItems>
               <contact></contact>
             </ContentPage>
@@ -415,6 +436,7 @@
 <p>if you're venue has multiple opening times (for example it's got a pool and a gym open at different times)  then you can add multiple opening times, if a venue has more than one set of opening times published they will show up in tabs on the venue page. </p>]]></bodyText>
               <pageSummary><![CDATA[Buildings, Parks, and other places you might want to locate]]></pageSummary>
               <serviceAlerts></serviceAlerts>
+              <esdServiceId></esdServiceId>
               <relatedItems></relatedItems>
               <contact></contact>
             </ContentPage>
@@ -431,6 +453,7 @@
 <p> </p>]]></bodyText>
               <pageSummary><![CDATA[Tell people the news or that something is happening somewhere]]></pageSummary>
               <serviceAlerts></serviceAlerts>
+              <esdServiceId></esdServiceId>
               <relatedItems></relatedItems>
               <contact></contact>
             </ContentPage>
@@ -447,6 +470,7 @@
 <p> </p>]]></bodyText>
               <pageSummary><![CDATA[Ways for people to get in touch with you]]></pageSummary>
               <serviceAlerts></serviceAlerts>
+              <esdServiceId></esdServiceId>
               <relatedItems></relatedItems>
               <contact></contact>
             </ContentPage>
@@ -472,6 +496,7 @@
 <p>We've included contact pages, with forms and everything (although you need to bring you're own mail server)</p>]]></bodyText>
           <pageSummary><![CDATA[All the new changes in the starter kit since the last version]]></pageSummary>
           <serviceAlerts></serviceAlerts>
+          <esdServiceId></esdServiceId>
           <relatedItems></relatedItems>
           <contact></contact>
         </ContentPage>
@@ -486,183 +511,114 @@
 <p><span style="font-size: 12pt; line-height: 1.42857143;">We have also had feedback from a number of councils who are using or used the starter kit as a base for their site, so you might want to see if any of them have any pointers - you can see <a href="http://jumoo.uk/speedy/feature.php?feature=Umbraco">a list of council's running umbraco</a> on our <a href="http://jumoo.uk/speedy/">pagespeedy service</a>.</span></p>]]></bodyText>
           <pageSummary><![CDATA[If you need more help or assistance with your starter kit, there are a number of things you can do.]]></pageSummary>
           <serviceAlerts></serviceAlerts>
+          <esdServiceId></esdServiceId>
           <relatedItems></relatedItems>
           <contact></contact>
         </ContentPage>
       </Children>
     </SectionHomepage>
-    <GatewayPage guid="943e121f-acfb-4c5f-be60-1d0a5443e52d" id="1087" nodeName="Example" isDoc="" updated="2015-07-14T13:45:54.4Z" parentGUID="fd0eba16-79cf-4965-96d7-63508a04c42a" nodeTypeAlias="GatewayPage" templateAlias="GatewayPage" sortOrder="15" published="true">
+    <GatewayPage guid="943e121f-acfb-4c5f-be60-1d0a5443e52d" id="1087" nodeName="Example" isDoc="" updated="2015-07-15T17:19:15.827Z" parentGUID="fd0eba16-79cf-4965-96d7-63508a04c42a" nodeTypeAlias="GatewayPage" templateAlias="GatewayPage" sortOrder="15" published="true">
       <umbracoNaviHide>0</umbracoNaviHide>
       <title><![CDATA[Example Content]]></title>
-      <bodyText><![CDATA[<p>this page leads to all the example content</p>]]></bodyText>
-      <pageSummary><![CDATA[Example content, to show you how to do things]]></pageSummary>
+      <bodyText><![CDATA[<p>Here lies all the example content. that will show you how all the bits of the starter kit can be used. This is a gateway page, it's a navigational page, that lets you get to all the interesting stuff in the site.</p>]]></bodyText>
+      <pageSummary><![CDATA[Example Pages and Content to show you just how the starter kit works.]]></pageSummary>
       <serviceAlerts></serviceAlerts>
+      <esdServiceId></esdServiceId>
       <mainItemCount></mainItemCount>
       <Children>
-        <ContentPage guid="e2275064-1573-4ef6-adf3-2546021fb0b7" id="1088" nodeName="Content Page" isDoc="" updated="2015-07-14T13:30:30.203Z" parentGUID="943e121f-acfb-4c5f-be60-1d0a5443e52d" nodeTypeAlias="ContentPage" templateAlias="ContentPage" sortOrder="0" published="true">
+        <ContentPage guid="e2275064-1573-4ef6-adf3-2546021fb0b7" id="1088" nodeName="Content Page" isDoc="" updated="2015-07-15T17:24:39.193Z" parentGUID="943e121f-acfb-4c5f-be60-1d0a5443e52d" nodeTypeAlias="ContentPage" templateAlias="ContentPage" sortOrder="0" published="true">
           <umbracoNaviHide>0</umbracoNaviHide>
           <title><![CDATA[A Content Page]]></title>
-          <bodyText><![CDATA[<p>this is a page of content</p>]]></bodyText>
-          <pageSummary><![CDATA[A page of content, to show what one looks like]]></pageSummary>
+          <bodyText><![CDATA[<p>The content pages use the main styles of the site so it's quite easy to format your content, so you can have:</p>
+<ul>
+<li>Lists</li>
+<li>Of things</li>
+<li>going down</li>
+</ul>
+<h3>Headings</h3>
+<p>to separate content from other bits of content</p>
+<p><span class="btn btn-lg btn-primary"><a href="/{localLink:943E121F-ACFB-4C5F-BE60-1D0A5443E52D}" title="Example">Buttons</a></span></p>
+<p>that get people to click to something else.</p>
+<p><span class="alert alert-info">Alerts - can be put in the content, to draw someone's' attention to something you consider important</span></p>
+<p>These are different to service alerts which sit across the top of the site, and work on any page, and can be on multiple pages. </p>
+<h4>Contact Details</h4>
+<p>The contact details on the right allow you to point people to a central place to contact you about a subject, they also let you measure just how many contacts a page is generating...</p>]]></bodyText>
+          <pageSummary><![CDATA[A page of content, which is the main type of page where information will be displayed.]]></pageSummary>
           <serviceAlerts></serviceAlerts>
+          <esdServiceId></esdServiceId>
           <relatedItems></relatedItems>
-          <contact><![CDATA[2aef0404-a443-4624-a582-527e0cec7aca]]></contact>
+          <contact><![CDATA[2AEF0404-A443-4624-A582-527E0CEC7ACA]]></contact>
         </ContentPage>
-        <ContactPage guid="2aef0404-a443-4624-a582-527e0cec7aca" id="1114" nodeName="Jumoo" isDoc="" updated="2015-07-14T13:32:16.46Z" parentGUID="943e121f-acfb-4c5f-be60-1d0a5443e52d" nodeTypeAlias="ContactPage" templateAlias="ContactPage" sortOrder="1" published="true">
+        <VenuePage guid="dd55e50a-4bd3-4e98-bce3-5334e12e2d31" id="1178" nodeName="A Venue" isDoc="" updated="2015-07-15T19:51:29.507Z" parentGUID="943e121f-acfb-4c5f-be60-1d0a5443e52d" nodeTypeAlias="VenuePage" templateAlias="VenuePage" sortOrder="1" published="true">
           <umbracoNaviHide>0</umbracoNaviHide>
-          <title><![CDATA[Jumoo Limited]]></title>
-          <bodyText><![CDATA[<p>This is the Jumoo Contact Page.</p>]]></bodyText>
-          <pageSummary><![CDATA[Contact details for getting hold of us.]]></pageSummary>
+          <title><![CDATA[A Venue]]></title>
+          <bodyText><![CDATA[<p>A venue page allows you to put specific information that might relate to a building, or location. </p>
+<p>the Editor can pick the location from a map, and the map will then be displayed to the users of the site. </p>
+<p>By creating an Opening Time node below a venue, the page will display when it is open and when it is closed. </p>]]></bodyText>
+          <pageSummary><![CDATA[A Venue is a location or building or something you want people to know where it is.]]></pageSummary>
           <serviceAlerts></serviceAlerts>
-          <telephoneNumber><![CDATA[07758 935 134]]></telephoneNumber>
-          <emailAddress><![CDATA[info@jumoo.co.uk]]></emailAddress>
-          <address><![CDATA[Jumoo,
-Liverpool]]></address>
-        </ContactPage>
-        <VenuePage guid="0c9430cc-179e-41ab-8758-e9c31a417f6d" id="1126" nodeName="Jumoo Towers" isDoc="" updated="2015-07-14T13:30:30.323Z" parentGUID="943e121f-acfb-4c5f-be60-1d0a5443e52d" nodeTypeAlias="VenuePage" templateAlias="VenuePage" sortOrder="2" published="true">
-          <umbracoNaviHide>0</umbracoNaviHide>
-          <title><![CDATA[Jumoo Towers]]></title>
-          <bodyText><![CDATA[<p>Jumoo towers is our fictional headquarters, we are in a much more idilic suburban location than this</p>]]></bodyText>
-          <pageSummary><![CDATA[Our super plush (fictional) office location.]]></pageSummary>
-          <serviceAlerts></serviceAlerts>
-          <location><![CDATA[53.40424255665108,-2.9877877235412598,14]]></location>
+          <esdServiceId></esdServiceId>
+          <location><![CDATA[53.37385634288877,-3.0324840545654297,12]]></location>
           <Children>
-            <OpeningTimes guid="01503755-c3c3-48fa-a6c1-9a0fc1455ba6" id="1131" nodeName="Winter Times" isDoc="" updated="2015-07-14T13:31:26.947Z" parentGUID="0c9430cc-179e-41ab-8758-e9c31a417f6d" nodeTypeAlias="OpeningTimes" templateAlias="" sortOrder="0" published="true">
+            <OpeningTimes guid="0705a275-6d17-4898-b740-ed6eef89d72f" id="1179" nodeName="Opening Times" isDoc="" updated="2015-07-15T19:37:54.95Z" parentGUID="dd55e50a-4bd3-4e98-bce3-5334e12e2d31" nodeTypeAlias="OpeningTimes" templateAlias="" sortOrder="0" published="true">
               <umbracoNaviHide>0</umbracoNaviHide>
-              <title><![CDATA[Winter Times]]></title>
+              <title><![CDATA[Opening Times]]></title>
               <bodyText></bodyText>
               <isComponent></isComponent>
               <openingTimes><![CDATA[[
   {
     "name": "Monday",
-    "scheduled": true,
-    "open": "09:30",
-    "close": "15:43",
-    "open2": "",
-    "close2": ""
+    "scheduled": false,
+    "open": "",
+    "close": ""
   },
   {
     "name": "Tuesday",
-    "scheduled": true,
-    "open": "09:30",
-    "close": "15:43",
-    "open2": "",
-    "close2": ""
+    "scheduled": false,
+    "open": "",
+    "close": ""
   },
   {
     "name": "Wednesday",
-    "scheduled": true,
-    "open": "09:30",
-    "close": "15:43",
-    "open2": "",
-    "close2": ""
+    "scheduled": false,
+    "open": "",
+    "close": ""
   },
   {
     "name": "Thursday",
-    "scheduled": true,
-    "open": "09:30",
-    "close": "15:43",
-    "open2": "",
-    "close2": ""
+    "scheduled": false,
+    "open": "",
+    "close": ""
   },
   {
     "name": "Friday",
     "scheduled": true,
-    "open": "09:30",
-    "close": "15:43",
-    "open2": "",
-    "close2": ""
+    "open": "19:30",
+    "close": "22:00"
   },
   {
     "name": "Saturday",
-    "scheduled": false,
-    "open": "09:30",
-    "close": "15:43",
-    "open2": "",
-    "close2": ""
+    "scheduled": true,
+    "open": "13:00",
+    "close": "19:00"
   },
   {
     "name": "Sunday",
-    "scheduled": false,
-    "open": "09:30",
-    "close": "15:43",
-    "open2": "",
-    "close2": ""
-  }
-]]]></openingTimes>
-            </OpeningTimes>
-            <OpeningTimes guid="75371380-e195-4dd7-8685-b1a395185e61" id="1132" nodeName="Summer" isDoc="" updated="2015-07-14T13:30:30.753Z" parentGUID="0c9430cc-179e-41ab-8758-e9c31a417f6d" nodeTypeAlias="OpeningTimes" templateAlias="" sortOrder="1" published="true">
-              <umbracoNaviHide>0</umbracoNaviHide>
-              <title><![CDATA[Summer Times]]></title>
-              <bodyText></bodyText>
-              <isComponent></isComponent>
-              <openingTimes><![CDATA[[
-  {
-    "name": "Monday",
     "scheduled": true,
-    "open": "07:30",
-    "close": "15:30",
-    "open2": "",
-    "close2": ""
-  },
-  {
-    "name": "Tuesday",
-    "scheduled": true,
-    "open": "07:30",
-    "close": "15:30",
-    "open2": "",
-    "close2": ""
-  },
-  {
-    "name": "Wednesday",
-    "scheduled": true,
-    "open": "07:30",
-    "close": "15:30",
-    "open2": "",
-    "close2": ""
-  },
-  {
-    "name": "Thursday",
-    "scheduled": true,
-    "open": "07:30",
-    "close": "15:30",
-    "open2": "",
-    "close2": ""
-  },
-  {
-    "name": "Friday",
-    "scheduled": true,
-    "open": "07:30",
-    "close": "15:30",
-    "open2": "",
-    "close2": ""
-  },
-  {
-    "name": "Saturday",
-    "scheduled": false,
-    "open": "07:30",
-    "close": "15:30",
-    "open2": "",
-    "close2": ""
-  },
-  {
-    "name": "Sunday",
-    "scheduled": false,
-    "open": "07:30",
-    "close": "15:30",
-    "open2": "",
-    "close2": ""
+    "open": "12:00",
+    "close": "18:30"
   }
 ]]]></openingTimes>
             </OpeningTimes>
           </Children>
         </VenuePage>
-        <ListingsPage guid="44e07320-c9b4-4426-b52f-0db2430f53a9" id="1133" nodeName="News" isDoc="" updated="2015-07-14T13:32:37.777Z" parentGUID="943e121f-acfb-4c5f-be60-1d0a5443e52d" nodeTypeAlias="ListingsPage" templateAlias="ListingsPage" sortOrder="3" published="true">
+        <ListingsPage guid="44e07320-c9b4-4426-b52f-0db2430f53a9" id="1133" nodeName="News" isDoc="" updated="2015-07-15T19:38:56.347Z" parentGUID="943e121f-acfb-4c5f-be60-1d0a5443e52d" nodeTypeAlias="ListingsPage" templateAlias="ListingsPage" sortOrder="2" published="true">
           <umbracoNaviHide>0</umbracoNaviHide>
           <title><![CDATA[News ]]></title>
           <bodyText><![CDATA[<p>The latest news on our starter kit</p>]]></bodyText>
           <pageSummary><![CDATA[All the news about the starterkit that you would ever want to hear]]></pageSummary>
           <serviceAlerts></serviceAlerts>
+          <esdServiceId></esdServiceId>
           <Children>
             <NewsItem guid="8b7946de-175d-4bc5-8cce-c0c30b82ada6" id="1134" nodeName="Starter Kit 5 - Almost ready" isDoc="" updated="2015-07-14T13:30:30.607Z" parentGUID="44e07320-c9b4-4426-b52f-0db2430f53a9" nodeTypeAlias="NewsItem" templateAlias="ListedItem" sortOrder="0" published="true">
               <umbracoNaviHide>0</umbracoNaviHide>
@@ -672,6 +628,7 @@ Liverpool]]></address>
 
 Once it's actually finished it will be dead good!]]></pageSummary>
               <serviceAlerts></serviceAlerts>
+              <esdServiceId></esdServiceId>
               <startDate>2015-07-10T13:08:53</startDate>
               <endDate>2015-07-10T15:07:00</endDate>
               <featuredImage><![CDATA[{
@@ -711,16 +668,17 @@ Once it's actually finished it will be dead good!]]></pageSummary>
   ]
 }]]></featuredImage>
             </NewsItem>
-            <NewsItem guid="e7fef37e-e8ff-4116-909d-32326e0c337e" id="1138" nodeName="Pagespeedy Friendly" isDoc="" updated="2015-07-14T13:30:30.683Z" parentGUID="44e07320-c9b4-4426-b52f-0db2430f53a9" nodeTypeAlias="NewsItem" templateAlias="ListedItem" sortOrder="1" published="true">
+            <NewsItem guid="e7fef37e-e8ff-4116-909d-32326e0c337e" id="1138" nodeName="Pagespeedy Friendly" isDoc="" updated="2015-07-15T19:50:56.947Z" parentGUID="44e07320-c9b4-4426-b52f-0db2430f53a9" nodeTypeAlias="NewsItem" templateAlias="ListedItem" sortOrder="1" published="true">
               <umbracoNaviHide>0</umbracoNaviHide>
               <title><![CDATA[Pagespeedy Friendly]]></title>
               <bodyText><![CDATA[<p>Along side localgov and umbraco, at Jumoo we are also a bit obsessed with speed. Namely Google PageSpeed. </p>
 <p>Our <a href="http://jumoo.uk/speeedy/">PageSpeedy Site</a> regularly checks all local government sites in the UK to see just how quick they are, and as well as seeing some real shockers we also see the fast stuff. </p>
-<p>So we have build the starterkit to be fast out the blocks, with debug off (so everything is compiled) you can expect the homepage of the starter kit to score around NN on google page speed , this would make the site in the fasted N% of local government websites in the UK. </p>]]></bodyText>
+<p>So we have build the starterkit to be fast out the blocks, with debug off (so everything is compiled) you can expect the homepage of the starter kit to score around at least 85 on google page speed. which is quicker than a lot of production local government sites.</p>]]></bodyText>
               <pageSummary><![CDATA[The starter kit has been built to be pagespeedy friendly, which means not only will you end up with a nice site it will be super fast too.
 
 see the documentation for just how the site is setup to be fast.]]></pageSummary>
               <serviceAlerts></serviceAlerts>
+              <esdServiceId></esdServiceId>
               <startDate>2015-07-08T15:31:43</startDate>
               <endDate></endDate>
               <featuredImage><![CDATA[{
@@ -750,19 +708,21 @@ see the documentation for just how the site is setup to be fast.]]></pageSummary
             </NewsItem>
           </Children>
         </ListingsPage>
-        <ListingsPage guid="deab0585-83a4-45cb-aac7-cc6a336683f9" id="1153" nodeName="Events" isDoc="" updated="2015-07-14T13:32:55.74Z" parentGUID="943e121f-acfb-4c5f-be60-1d0a5443e52d" nodeTypeAlias="ListingsPage" templateAlias="ListingsPage" sortOrder="4" published="true">
+        <ListingsPage guid="deab0585-83a4-45cb-aac7-cc6a336683f9" id="1153" nodeName="Events" isDoc="" updated="2015-07-15T19:38:56.373Z" parentGUID="943e121f-acfb-4c5f-be60-1d0a5443e52d" nodeTypeAlias="ListingsPage" templateAlias="ListingsPage" sortOrder="3" published="true">
           <umbracoNaviHide>0</umbracoNaviHide>
           <title><![CDATA[Events]]></title>
           <bodyText><![CDATA[<p>This is a list of events</p>]]></bodyText>
           <pageSummary><![CDATA[Things happen from time to time, and we'd like to tell you about them]]></pageSummary>
           <serviceAlerts></serviceAlerts>
+          <esdServiceId></esdServiceId>
           <Children>
-            <Event guid="adb8803e-40b1-4cd3-bdd6-991d056c5040" id="1154" nodeName="Umbraco Liverpool" isDoc="" updated="2015-07-14T13:30:30.537Z" parentGUID="deab0585-83a4-45cb-aac7-cc6a336683f9" nodeTypeAlias="Event" templateAlias="ListedItem" sortOrder="0" published="true">
+            <Event guid="adb8803e-40b1-4cd3-bdd6-991d056c5040" id="1154" nodeName="Umbraco Liverpool" isDoc="" updated="2015-07-15T19:49:58.653Z" parentGUID="deab0585-83a4-45cb-aac7-cc6a336683f9" nodeTypeAlias="Event" templateAlias="ListedItem" sortOrder="0" published="true">
               <umbracoNaviHide>0</umbracoNaviHide>
               <title><![CDATA[Umbraco Liverpool]]></title>
-              <bodyText><![CDATA[<p>Umbraco Liverpool,</p>]]></bodyText>
-              <pageSummary><![CDATA[The best meetup this side of the manchester ship canal.]]></pageSummary>
+              <bodyText><![CDATA[<p>Umbraco Liverpool is the sporadic meetup in random locations around liverpool, we should have at least one more before the year is out, so checkout <a href="http://www.meetup.com/Liverpool-Umbraco-Meetup/">our meetup page</a> to see if we have gotten around to organising it yet. </p>]]></bodyText>
+              <pageSummary><![CDATA[The best meetup this side of the Runcorn Bridge.]]></pageSummary>
               <serviceAlerts></serviceAlerts>
+              <esdServiceId></esdServiceId>
               <startDate>2015-09-16T19:30:44</startDate>
               <endDate>2015-09-16T22:00:53</endDate>
               <featuredImage><![CDATA[{
@@ -770,7 +730,7 @@ see the documentation for just how the site is setup to be fast.]]></pageSummary
     "left": 0.5,
     "top": 0.5
   },
-  "src": "/media/1003/dscf9541.jpg",
+  "src": "/media/1003/bridgecropped.jpg",
   "crops": [
     {
       "alias": "Homepage",
@@ -780,7 +740,13 @@ see the documentation for just how the site is setup to be fast.]]></pageSummary
     {
       "alias": "Featured",
       "width": 750,
-      "height": 200
+      "height": 200,
+      "coordinates": {
+        "x1": 1.2631870857957339E-16,
+        "y1": 0.367242206235012,
+        "x2": 0,
+        "y2": 0.27736211031175051
+      }
     },
     {
       "alias": "Listing",
@@ -792,6 +758,20 @@ see the documentation for just how the site is setup to be fast.]]></pageSummary
             </Event>
           </Children>
         </ListingsPage>
+        <ContactPage guid="2aef0404-a443-4624-a582-527e0cec7aca" id="1114" nodeName="Jumoo" isDoc="" updated="2015-07-15T19:40:43.353Z" parentGUID="943e121f-acfb-4c5f-be60-1d0a5443e52d" nodeTypeAlias="ContactPage" templateAlias="ContactPage" sortOrder="4" published="true">
+          <umbracoNaviHide>0</umbracoNaviHide>
+          <title><![CDATA[Contact Jumoo]]></title>
+          <bodyText><![CDATA[<p>This is a contact page, contact pages bring together your contact details and let people know how to get in touch with you.</p>
+<p>Online is listed first, because it's cheaper for you if they contact you this way. (usually)</p>]]></bodyText>
+          <pageSummary><![CDATA[Contact details for getting hold of us.]]></pageSummary>
+          <serviceAlerts></serviceAlerts>
+          <esdServiceId></esdServiceId>
+          <telephoneNumber><![CDATA[07758 935 134]]></telephoneNumber>
+          <emailAddress><![CDATA[info@jumoo.co.uk]]></emailAddress>
+          <address><![CDATA[Jumoo Limited
+Liverpool,
+L18 1EZ]]></address>
+        </ContactPage>
       </Children>
     </GatewayPage>
     <Atoz guid="bcce754e-4924-467d-9da0-18180dd82985" id="1120" nodeName="AtoZ" isDoc="" updated="2015-07-14T13:45:54.427Z" parentGUID="fd0eba16-79cf-4965-96d7-63508a04c42a" nodeTypeAlias="Atoz" templateAlias="AtoZPage" sortOrder="16" published="true">
@@ -800,13 +780,15 @@ see the documentation for just how the site is setup to be fast.]]></pageSummary
       <bodyText><![CDATA[<p>This is the AtoZ Page</p>]]></bodyText>
       <pageSummary></pageSummary>
       <serviceAlerts></serviceAlerts>
+      <esdServiceId></esdServiceId>
     </Atoz>
     <Search guid="37f14999-eb19-4b32-9eb1-d8d70938c6b3" id="1069" nodeName="search" isDoc="" updated="2015-07-14T13:45:54.457Z" parentGUID="fd0eba16-79cf-4965-96d7-63508a04c42a" nodeTypeAlias="Search" templateAlias="SearchPage" sortOrder="17" published="true">
       <umbracoNaviHide>1</umbracoNaviHide>
       <title><![CDATA[Site Search]]></title>
-      <bodyText><![CDATA[<p>The site search is using a <a href="/{localLink:6a24284f-2758-47eb-b2c0-114cae694592}" title="Packages">slightly modified</a> version of <a href="https://our.umbraco.org/projects/website-utilities/ezsearch">ezSearch </a>to display results.</p>]]></bodyText>
+      <bodyText><![CDATA[<p>The site search is using a <a href="/{localLink:6A24284F-2758-47EB-B2C0-114CAE694592}" title="Packages">slightly modified</a> version of <a href="https://our.umbraco.org/projects/website-utilities/ezsearch">ezSearch </a>to display results.</p>]]></bodyText>
       <pageSummary></pageSummary>
       <serviceAlerts></serviceAlerts>
+      <esdServiceId></esdServiceId>
     </Search>
     <Sitemap guid="04059b55-08ad-4ecc-b1ee-456610c5358b" id="1070" nodeName="Sitemap" isDoc="" updated="2015-07-14T13:45:54.48Z" parentGUID="fd0eba16-79cf-4965-96d7-63508a04c42a" nodeTypeAlias="Sitemap" templateAlias="Sitemap" sortOrder="18" published="true">
       <umbracoNaviHide>1</umbracoNaviHide>
@@ -814,6 +796,7 @@ see the documentation for just how the site is setup to be fast.]]></pageSummary
       <bodyText><![CDATA[<p>A sitemap of the site</p>]]></bodyText>
       <pageSummary></pageSummary>
       <serviceAlerts></serviceAlerts>
+      <esdServiceId></esdServiceId>
     </Sitemap>
     <SettingFolder guid="94e4ff1c-4af5-4be8-b869-edc9c0f9c89f" id="1110" nodeName="Settings" isDoc="" updated="2015-07-14T13:45:54.507Z" parentGUID="fd0eba16-79cf-4965-96d7-63508a04c42a" nodeTypeAlias="SettingFolder" templateAlias="" sortOrder="19" published="true">
       <isComponent></isComponent>
@@ -838,6 +821,7 @@ see the documentation for just how the site is setup to be fast.]]></pageSummary
       <bodyText><![CDATA[<p>We use cookies.</p>]]></bodyText>
       <pageSummary></pageSummary>
       <serviceAlerts></serviceAlerts>
+      <esdServiceId></esdServiceId>
       <relatedItems></relatedItems>
       <contact></contact>
     </ContentPage>
@@ -847,6 +831,7 @@ see the documentation for just how the site is setup to be fast.]]></pageSummary
       <bodyText><![CDATA[<p>We don't share data.</p>]]></bodyText>
       <pageSummary></pageSummary>
       <serviceAlerts></serviceAlerts>
+      <esdServiceId></esdServiceId>
       <relatedItems></relatedItems>
       <contact></contact>
     </ContentPage>
@@ -856,6 +841,7 @@ see the documentation for just how the site is setup to be fast.]]></pageSummary
       <bodyText><![CDATA[<p>This site is designed to be accessible. </p>]]></bodyText>
       <pageSummary></pageSummary>
       <serviceAlerts></serviceAlerts>
+      <esdServiceId></esdServiceId>
       <relatedItems></relatedItems>
       <contact></contact>
     </ContentPage>

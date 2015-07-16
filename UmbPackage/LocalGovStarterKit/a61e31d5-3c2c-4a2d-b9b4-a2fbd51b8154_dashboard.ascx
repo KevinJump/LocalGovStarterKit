@@ -67,3 +67,5 @@
     </div> 
 </div>
 <!-- <div class="umb-loader-wrapper"><div class="umb-loader"></div></div> -->
+
+<asp:Button ID="btnTest" runat="server" OnClick="btnTest_Click" text="do stuff."/>
