@@ -39,5 +39,11 @@ namespace Jumoo.LocalGovStarterKit
             var importCount = x.Import("navigation_scottishServices.xml", false);
             importMessage.Text = string.Format("Imported {0} Items - go look at the content node", importCount);
         }
+
+        protected void btnTest_Click(object sender, EventArgs e)
+        {
+            Importer z = new Importer();
+            z.ExportContentTree(1068, "HelpandExample.content");
+        }
     }
 }
