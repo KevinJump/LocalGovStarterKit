@@ -1,0 +1,45 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@* 
+    page tracker, part of the passive personalization shizzel. 
+
+    if a page is maked as part of personalization, then when a user
+    visits that page we add the page id to our cookie, along with
+    a count, this is then used on the homepage (any maybe others)
+    to show this users popular recent things. 
+
+    this view is on all pages and does the cookie bit.
+
+*@
+
+@if (Model.Content.HasProperty("personalizedContent") && Model.Content.GetPropertyValue<bool>("personalizedContent") == true)
+{
+
+    HttpCookie cookie;     
+    // cookie..
+    if (Request.Cookies["activites"] != null)
+    {
+        cookie = Request.Cookies["activites"];
+    }
+    else
+    {
+        cookie = new HttpCookie("activites");
+    }
+    
+    
+    // is this page already in our cookie
+    if (cookie[Model.Content.Id.ToString()] != null)
+    {
+        // increment
+        cookie[Model.Content.Id.ToString()] = (int.Parse(cookie[Model.Content.Id.ToString()]) + 1).ToString();
+    }
+    else
+    {
+        // add
+        cookie[Model.Content.Id.ToString()] = "1";
+    }
+
+
+    cookie.Expires = DateTime.Now.AddDays(90);
+    Response.Cookies.Add(cookie);
+}

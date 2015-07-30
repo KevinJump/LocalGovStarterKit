@@ -299,6 +299,10 @@
     <Content Include="Views\Partials\Page\CookieNotice.cshtml" />
     <Content Include="Views\Partials\Nav\FooterLinks.cshtml" />
     <Content Include="App_Data\lgsk.imports\HelpandExample.content" />
+    <Content Include="Views\Partials\Page\PageTracker.cshtml" />
+    <Content Include="Views\Partials\Homepage\Personalized.cshtml" />
+    <Content Include="Views\MacroPartials\HomepageBinDates.cshtml" />
+    <Content Include="Views\Partials\Components\OpenStatus.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

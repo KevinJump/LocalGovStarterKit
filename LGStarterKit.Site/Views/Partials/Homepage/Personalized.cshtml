@@ -1,0 +1,117 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using Newtonsoft.Json.Linq
+
+@*
+    part of the passive personalization
+
+    reads the cookie, renders upto 3 personalized boxes based on what content the user has
+    visited in the past (90) days
+*@
+@if (Request.Cookies["activites"] != null)
+{
+    var cookie = Request.Cookies["activites"];
+
+    if (cookie.HasKeys)
+    {
+        var values = cookie.Values.AllKeys.ToDictionary(k => k, v => cookie.Values[v]);
+
+        <div class="personalized-content">
+            <div class="container">
+                <div class="row">
+                    @foreach (var val in values.OrderByDescending(v => v.Value).Take(3))
+                    {
+                        <div class="col-xs-4">
+                            @RenderBlock(val.Key)
+                        </div>
+                    }
+                    <div class="col-xs-12">
+                        <div class="pull-right">
+                            <small><em>stuff you might want based on your previous visits</em></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}
+
+@helper RenderBlock(string id)
+{
+    var item = Umbraco.TypedContent(id);
+    <div class="personalized-block">
+        <h3><a href="@item.Url">@item.GetPropertyValue("title", item.Name)</a> <small>@RenderOpeningStatus(item)</small></h3>
+
+        @if (item.HasValue("macro"))
+        {
+            <span>@Html.Raw(item.GetPropertyValue("macro"))</span>
+        }
+        else
+        {
+            @RenderLinks(item)
+        }
+        
+    </div>
+
+}
+
+@helper RenderOpeningStatus(IPublishedContent item)
+{
+    // bit of a crude example of how to tell if something is open today.
+    // for the starter kit we use this on a personalization block
+    // if something has an opening time, so we can say "open until..."
+    
+    // default is closed 
+    var status = "Closed today";
+    // if the item has a child opening time, work out if it's open now?
+    if ( item.Children.Where(x => x.DocumentTypeAlias == "OpeningTimes").Any())
+    {
+        var opentimes = item.Children.Where(x => x.DocumentTypeAlias == "OpeningTimes").First();
+        var openingInfo = opentimes.GetPropertyValue<Jumoo.OpeningSoon.OpeningSoonModel>("openingTimes");
+        
+        var day = openingInfo.Where(x => x.Weekday == DateTime.Now.DayOfWeek.ToString()).FirstOrDefault();        
+        if ( day != null && day.IsScheduled )
+        {
+            if ( day.IsFirstSet && !day.IsSecondSet )
+            {
+                // just one time    
+                var open = DateTime.Parse( string.Format("{0} {1}", DateTime.Now.ToString("dd-MMM-yyyy"), @day.Open));
+                var closed = DateTime.Parse( string.Format("{0} {1}", DateTime.Now.ToString("dd-MMM-yyyy"), @day.Close));
+                
+                if (DateTime.Now > open)
+                {
+                    if ( DateTime.Now < closed)
+                    {
+                     status = "Open until " + closed.ToString("h:mm tt").ToLower();
+                    }
+                    else 
+                    {
+                        status = "Closed for the day";
+                    }
+                }
+                else
+                {
+                    status = "Opens at " + open.ToString("h:mm tt").ToLower();
+                }
+            }
+        }
+        
+        <span class="open-status">@status</span>
+    }
+}
+
+@helper RenderLinks(IPublishedContent item)
+{
+    if (item.HasValue("links") && item.GetPropertyValue<string>("links").Length > 2)
+    {
+        <ul class="bin-list">
+            @foreach (var link in item.GetPropertyValue<JArray>("links"))
+            {
+                var linkUrl = (link.Value<bool>("isInternal")) ? Umbraco.NiceUrl(link.Value<int>("internal")) : link.Value<string>("link");
+                var linkTarget = link.Value<bool>("newWindow") ? "_blank" : null;
+
+                <li><a href="@linkUrl" target="@linkTarget">@(link.Value<string>("caption"))</a></li>
+            }
+        </ul>
+    }
+
+}

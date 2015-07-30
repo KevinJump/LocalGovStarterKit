@@ -45,3 +45,38 @@
     border: none;
     background-color: transparent;
 }
+
+.personalized-content
+{
+    margin-top: -1em;
+    margin-bottom: 1em;
+    padding: 1em 0;
+    background-color: #C8E6C9;
+}
+
+.personalized-block{
+    background-color: #E8F5E9;
+}
+
+.personalized-block h3 {
+    margin: 0;
+    padding: 0.2em;
+    background-color: #2e7d32;
+}
+
+.personalized-block h3 a {
+    color: #f1f1f1;
+}
+
+.personalized-block h3 small {
+    color: #eee;
+}
+
+.bin-list {
+    padding: 0.4em;
+    list-style: none;
+}
+
+.bin-list li {
+    padding: 0.2em;
+}
