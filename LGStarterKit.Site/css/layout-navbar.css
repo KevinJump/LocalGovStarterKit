@@ -33,3 +33,28 @@
 {
     color: #bdbdbd;
 }
+
+.icon-bar-holder {
+    float:left;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #FFCCBC;
+}
+
+button.navbar-toggle {
+    border-radius: 0;
+    border-color: #FF8A65; /* ORANGE 900*/
+}
+
+span.icon-bar-name {
+    float: left;
+    padding-right: 5px;
+    margin-top: -5px;
+    color: #FFCCBC;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover
+{
+    background-color: #BF360C;
+}
