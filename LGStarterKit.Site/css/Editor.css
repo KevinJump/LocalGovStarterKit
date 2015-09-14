@@ -1,33 +1,22 @@
-body.mce-content-body {
-	font-family: 'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
-	font-size: 12pt;
-	padding: 5px;
-}/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */
-h2 {
+﻿body.mce-content-body {	font-family: 'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;	font-size: 12pt;	padding: 5px;
 
-}
+/**umb_name:Main Heading*/
+h2{}
 
-h3 {
+/**umb_name:Sub Heading*/
+h3{}
 
-}
+/**umb_name:Button - Default*/
+.btn btn-lg btn-primary{}
 
-.btn btn-lg btn-primary {
+/**umb_name:Alert - Info*/
+.alert alert-info{}
 
-}
+/**umb_name:Alert - Warning*/
+.alert alert-warning{}
 
-.alert alert-info {
+/**umb_name:Alert - Danger*/
+.alert alert-danger{}
 
-}
-
-.alert alert-warning {
-
-}
-
-.alert alert-danger {
-
-}
-
-h4 {
-
-}
-
+/**umb_name:Small Heading*/
+h4{}
