@@ -1,1 +1,60 @@
-﻿.navbar {    border: 0;    border-radius: 0;    margin-bottom: 0;}.navbar-default {    background-color: #F4511E; /* ORGANGE 600 */    border-bottom: none;	-moz-box-shadow: rgba(0,0,0,0.6) 0 0 12px -2px;	-webkit-box-shadow: rgba(0,0,0,0.6) 0 0 12px -2px;	-o-box-shadow: rgba(0,0,0,0.6) 0 0 12px -2px;	box-shadow: rgba(0,0,0,0.6) 0 0 12px -2px;}.navbar-default .navbar-brand {    color: #FAFAFA;    font-weight: 700;}.navbar-default .navbar-nav>li>a {    color: #FAFAFA;}.navbar-default .navbar-nav>.active>a {    background-color: #BF360C; /* ORGANGE 900 */    color: #fafafa;}.navbar-default .navbar-nav>li>a:hover,.navbar-default .navbar-nav>li>a:focus{    color: #bdbdbd;}.icon-bar-holder {    float:left;}.navbar-default .navbar-toggle .icon-bar {    background-color: #FFCCBC;}button.navbar-toggle {    border-radius: 0;    border-color: #FF8A65; /* ORANGE 900*/}span.icon-bar-name {    float: left;    padding-right: 5px;    margin-top: -5px;    color: #FFCCBC;}.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{    background-color: #BF360C;}
+.navbar {
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+.navbar-default {
+    background-color: #F4511E; /* ORGANGE 600 */
+    border-bottom: none;
+
+	-moz-box-shadow: rgba(0,0,0,0.6) 0 0 12px -2px;
+	-webkit-box-shadow: rgba(0,0,0,0.6) 0 0 12px -2px;
+	-o-box-shadow: rgba(0,0,0,0.6) 0 0 12px -2px;
+	box-shadow: rgba(0,0,0,0.6) 0 0 12px -2px;
+}
+
+.navbar-default .navbar-brand {
+    color: #FAFAFA;
+    font-weight: 700;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #FAFAFA;
+}
+
+.navbar-default .navbar-nav>.active>a {
+    background-color: #BF360C; /* ORGANGE 900 */
+    color: #fafafa;
+}
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus
+{
+    color: #bdbdbd;
+}
+
+.icon-bar-holder {
+    float:left;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #FFCCBC;
+}
+
+button.navbar-toggle {
+    border-radius: 0;
+    border-color: #FF8A65; /* ORANGE 900*/
+}
+
+span.icon-bar-name {
+    float: left;
+    padding-right: 5px;
+    margin-top: -5px;
+    color: #FFCCBC;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover
+{
+    background-color: #BF360C;
+}

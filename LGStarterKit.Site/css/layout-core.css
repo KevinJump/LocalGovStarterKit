@@ -1,1 +1,78 @@
-﻿/* core stuff *//*    Dark Organge    50  #FBE9E7    100 #FFCCBC    200 #FFAB91    300 #FF8A65    400 #FF7043    500 #FF5722    600 #F4511E    700 #E64A19    800 #D84315    900 #BF360C    Green    50  #E8F5E9    100 #C8E6C9    200 #A5D6A7    300 #81C784    400 #66BB6A    500 #4CAF50    600 #43A047    700 #388E3C    800 #2E7D32    900 #1B5E20*/body {    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;    font-size: 12pt;    margin-top: 0;    background-color: #fcfcfc;}h1, h2, h3, h4, h5, h6 {    font-family: 'Ubuntu', 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;    font-weight: 500;}/* remove all the round corners *//* remove rounded corners */.container .jumbotron,.alert,.well,.form-control,.btn,.breadbrumb,.nav-pills>li>a {    border-radius: 0;}.jumoo {     font-family: Pacifico;     font-weight: 400; }a { color: #005ea5; }a:visited { color: #4c2c92; }a:hover, a:active { color: #337ab7; }.page-header {     margin-top: 20px;}span.alert { display: block; }.cookie-notice {    font-size: 89%;    padding: 0.5em;    background-color: #C8E6C9;}
+/* core stuff */
+
+/*
+    Dark Organge
+    50  #FBE9E7
+    100 #FFCCBC
+    200 #FFAB91
+    300 #FF8A65
+    400 #FF7043
+    500 #FF5722
+    600 #F4511E
+    700 #E64A19
+    800 #D84315
+    900 #BF360C
+
+    Green
+    50  #E8F5E9
+    100 #C8E6C9
+    200 #A5D6A7
+    300 #81C784
+    400 #66BB6A
+    500 #4CAF50
+    600 #43A047
+    700 #388E3C
+    800 #2E7D32
+    900 #1B5E20
+
+*/
+
+body 
+{
+    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12pt;
+
+    margin-top: 0;
+    background-color: #fcfcfc;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Ubuntu', 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+}
+
+/* remove all the round corners */
+/* remove rounded corners */
+.container .jumbotron,
+.alert,
+.well,
+.form-control,
+.btn,
+.breadbrumb,
+.nav-pills>li>a 
+{
+    border-radius: 0;
+}
+
+.jumoo { 
+    font-family: Pacifico; 
+    font-weight: 400; 
+}
+
+a { color: #005ea5; }
+a:visited { color: #4c2c92; }
+a:hover, a:active { color: #337ab7; }
+
+.page-header { 
+    margin-top: 20px;
+}
+
+span.alert { display: block; }
+
+.cookie-notice {
+    font-size: 89%;
+    padding: 0.5em;
+    background-color: #C8E6C9;
+}
+
+/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */

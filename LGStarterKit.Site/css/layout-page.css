@@ -1,1 +1,21 @@
-﻿.section-nav ul ul{    border-left: 3px solid #337ab7;    background-color: #f1f1f1;}.section-nav h2 a {    color: #212121;}.item-image {    width: 100%;    margin: 1em 0;}.content-body h2, .content-body h3, .content-body h4 {    border-bottom: 1px solid #f1f1f1;}.btn a { color: #fff; }
+﻿.section-nav ul ul
+{
+    border-left: 3px solid #337ab7;
+    background-color: #f1f1f1;
+}
+
+.section-nav h2 a {
+    color: #212121;
+}
+
+.item-image {
+    width: 100%;
+    margin: 1em 0;
+}
+
+.content-body h2, .content-body h3, .content-body h4 {
+    border-bottom: 1px solid #f1f1f1;
+
+}
+
+.btn a { color: #fff; }
