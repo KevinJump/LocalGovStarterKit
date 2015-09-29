@@ -8,6 +8,7 @@ using Umbraco.Core;
 using Umbraco.Core.Models;
 
 using Jumoo.uSync.Core;
+
 using Umbraco.Core.Logging;
 using Umbraco.Core.IO;
 
@@ -22,10 +23,9 @@ namespace Jumoo.LocalGovStarterKit
     /// </summary>
     public class Importer
     {
-        private uSyncEngine _uSync;
         public Importer()
         {
-            _uSync = new uSyncEngine();
+            uSyncCoreContext.Instance.Init();
         }
 
         public bool ImportContentTree(string fileName)
@@ -89,9 +89,8 @@ namespace Jumoo.LocalGovStarterKit
         private void ImportContentNode(XElement node, int parent)
         {
             LogHelper.Info<Importer>("Importing: {0} - {1}", () => node.Name.ToString(), () => parent);
-            var content = _uSync.Content.DeSerialize(node, parent, true);
-
-            if (content != null)
+            var attempt = uSyncCoreContext.Instance.ContentSerializer.Deserialize(node, true, true);
+            if (attempt.Success)
             {
                 if (node.Element("Children") != null)
                 {
@@ -100,7 +99,7 @@ namespace Jumoo.LocalGovStarterKit
                     foreach(var child in children.Elements())
                     {
                         if (child.Name != "Children")
-                            ImportContentNode(child, content.Id);
+                            ImportContentNode(child, attempt.Item.Id);
                     }
                 }
             }
@@ -130,9 +129,9 @@ namespace Jumoo.LocalGovStarterKit
 
         private XElement ExportContent(IContent item)
         {
-            var node = _uSync.Content.Serialize(item);
+            var attempt = uSyncCoreContext.Instance.ContentSerializer.Serialize(item);
 
-            if (item.Children().Any())
+            if (attempt.Success && item.Children().Any())
             {
                 var childrenNode = new XElement("Children");
 
@@ -142,11 +141,14 @@ namespace Jumoo.LocalGovStarterKit
                     childrenNode.Add(childNode);
                 }
 
+                var node = attempt.Item;
                 node.Add(childrenNode);
+
+                return node;
             }
 
-            return node; 
-            
+            return null;
+
         }
 
         // does some checking 
