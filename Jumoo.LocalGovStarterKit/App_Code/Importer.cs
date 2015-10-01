@@ -89,7 +89,7 @@ namespace Jumoo.LocalGovStarterKit
         private void ImportContentNode(XElement node, int parent)
         {
             LogHelper.Info<Importer>("Importing: {0} - {1}", () => node.Name.ToString(), () => parent);
-            var attempt = uSyncCoreContext.Instance.ContentSerializer.Deserialize(node, true, true);
+            var attempt = uSyncCoreContext.Instance.ContentSerializer.Deserialize(node, parent, true);
             if (attempt.Success)
             {
                 if (node.Element("Children") != null)
@@ -131,18 +131,21 @@ namespace Jumoo.LocalGovStarterKit
         {
             var attempt = uSyncCoreContext.Instance.ContentSerializer.Serialize(item);
 
-            if (attempt.Success && item.Children().Any())
+            if (attempt.Success)
             {
-                var childrenNode = new XElement("Children");
-
-                foreach(var child in item.Children())
-                {
-                    var childNode = ExportContent(child);
-                    childrenNode.Add(childNode);
-                }
-
                 var node = attempt.Item;
-                node.Add(childrenNode);
+
+                if (item.Children().Any())
+                {
+                    var childrenNode = new XElement("Children");
+
+                    foreach (var child in item.Children())
+                    {
+                        var childNode = ExportContent(child);
+                        childrenNode.Add(childNode);
+                    }
+                    node.Add(childrenNode);
+                }
 
                 return node;
             }

@@ -1,0 +1,17 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "SystemPages.cshtml";
+}
+
+
+@Umbraco.RenderMacro("ezSearch", 
+					 new {
+                         hideFromSearchField="umbracoNaviHide",
+                         indexType="BOTH",
+                         pageSize="10",
+                         previewFields="bodyText,summary",
+                         previewLength="175",
+                         rootContentNodeId="",
+                         rootMediaNodeId="",
+                         searchFields="title, bodyText",
+                         searchFormLocation="NONE"})

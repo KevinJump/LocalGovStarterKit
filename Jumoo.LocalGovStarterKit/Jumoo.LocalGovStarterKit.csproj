@@ -99,8 +99,8 @@
       <HintPath>..\packages\UmbracoCms.Core.7.3.0\lib\interfaces.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Jumoo.uSync.Core, Version=3.0.5750.30340, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\uSync.Core.3.0.0\lib\net45\Jumoo.uSync.Core.dll</HintPath>
+    <Reference Include="Jumoo.uSync.Core, Version=5.0.5752.26515, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\uSync.Core.5.0.1\lib\net45\Jumoo.uSync.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, processorArchitecture=MSIL">

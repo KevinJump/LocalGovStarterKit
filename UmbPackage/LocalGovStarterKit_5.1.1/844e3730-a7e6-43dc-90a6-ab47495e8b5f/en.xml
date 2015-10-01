@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<language>
+  <area alias="openingsoon">
+    <key alias="monday">Monday</key>
+    <key alias="tuesday">Tuesday</key>
+    <key alias="wednesday">Wednesday</key>
+    <key alias="thursday">Thursday</key>
+    <key alias="friday">Friday</key>
+    <key alias="saturday">Saturday</key>
+    <key alias="sunday">Sunday</key>
+    <key alias="until">until</key>
+    <key alias="and">and</key>
+    <key alias="notScheduled">not scheduled</key>
+    <key alias="clearAll">Clear all</key>
+    <key alias="autofill">Autofill</key>
+  </area>
+</language>

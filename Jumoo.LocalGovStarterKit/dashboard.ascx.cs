@@ -45,5 +45,11 @@ namespace Jumoo.LocalGovStarterKit
             Importer z = new Importer();
             z.ExportContentTree(1068, "HelpandExample.content");
         }
+
+        protected void btnCreateExport_Click(object sender, EventArgs e)
+        {
+            Importer z = new Importer();
+            z.ExportContentTree(1068, "HelpandExample.content");
+        }
     }
 }

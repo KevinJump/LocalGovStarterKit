@@ -1,0 +1,54 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@{
+
+
+    if (Model.Content.HasValue("contact"))
+    {
+        var contactItemId = Model.Content.GetPropertyValue<int>("contact");
+        if (contactItemId > 0)
+        {
+            var contactItem = Umbraco.TypedContent(contactItemId);
+
+            if (contactItem != null)
+            {
+                <div class="section-nav">
+                    <h2 class="page-header">Contact Us</h2>
+                    <ul class="nav nav-stacked nav-pills">
+
+                        @if (contactItem.HasValue("telephoneNumber"))
+                        {
+                            <li>
+                                <a href="@contactItem.Url#telephone"
+                                   onclick="ga('send', 'event', 'ContactUs', 'Telephone', '@Umbraco.Field("title")');">
+                                    <span class="glyphicon glyphicon-phone-alt"></span> Telephone</a>
+                            </li>
+                        }
+
+                        @if (contactItem.HasValue("emailAddress"))
+                        {
+                            <li>
+                                <a href="@contactItem.Url#email"
+                                   onclick="ga('send', 'event', 'ContactUs', 'Email', '@Umbraco.Field("title")');">
+                                    <span class="glyphicon glyphicon-envelope"></span> Email
+                                </a>
+                            </li>
+                        }
+
+                        @if (contactItem.HasValue("address"))
+                        {
+                            <li>
+                                <a href="@contactItem.Url#address"
+                                   onclick="ga('send', 'event', 'ContactUs', 'Address', '@Umbraco.Field("title")');">
+                                    <span class="glyphicon glyphicon-paperclip"></span> Address
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+
+            }
+        }
+    }
+
+}

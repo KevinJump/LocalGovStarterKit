@@ -1,0 +1,45 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Jumoo.LocalGov.ContactViewModel>
+
+@{
+    var displayTitle = Umbraco.GetDictionaryValue("Contact.Email");
+    if (string.IsNullOrEmpty(displayTitle))
+    {
+        displayTitle = "Online";
+    }
+
+}
+
+@using (Html.BeginUmbracoForm<Jumoo.LocalGov.ContactFormSurfaceController>("SendContact", null, new { @class = "form-horizontal" }))
+{
+    <fieldset>
+        <h3 class="page-header">@displayTitle</h3>
+
+        <div class="form-group">
+            @Html.LabelFor(x => Model.Name, new { @class = "control-label col-sm-3" })
+            <div class="col-sm-9">
+                @Html.TextBoxFor(x => Model.Name, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => Model.Name)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => Model.Email, new { @class = "control-label col-sm-3" })
+            <div class="col-sm-9">
+                @Html.TextBoxFor(x => Model.Email, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => Model.Email)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => Model.Message, new { @class = "control-label col-sm-3" })
+            <div class="col-sm-9">
+                @Html.TextAreaFor(x => Model.Message, 10, 50, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => Model.Message)
+            </div>
+        </div>
+
+        @Html.HiddenFor(x => Model.ToAddress)
+
+        <div class="col-sm-9 col-sm-offset-3">
+            <input type="submit" class="btn btn-primary btn-lg" value="Send" />
+        </div>
+    </fieldset>
+}
