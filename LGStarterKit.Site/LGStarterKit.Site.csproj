@@ -98,6 +98,10 @@
       <HintPath>..\packages\UmbracoCms.Core.7.3.0\lib\interfaces.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Jumoo.uSync.Core, Version=5.0.5752.26515, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\uSync.Core.5.0.1\lib\net45\Jumoo.uSync.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\UmbracoCms.Core.7.3.0\lib\log4net.dll</HintPath>
       <Private>True</Private>
@@ -375,14 +379,6 @@
     <Content Include="Views\Partials\Nav\FooterLinks.cshtml" />
     <Content Include="App_Data\lgsk.imports\HelpandExample.content" />
     <Content Include="packages.config" />
-    <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
-    <Content Include="Views\Partials\Grid\Editors\Rte.cshtml" />
-    <Content Include="Views\Partials\Grid\Editors\Media.cshtml" />
-    <Content Include="Views\Partials\Grid\Editors\Macro.cshtml" />
-    <Content Include="Views\Partials\Grid\Editors\Embed.cshtml" />
-    <Content Include="Views\Partials\Grid\Editors\Base.cshtml" />
-    <Content Include="Views\Partials\Grid\Bootstrap3.cshtml" />
-    <Content Include="Views\Partials\Grid\Bootstrap2.cshtml" />
     <Content Include="Config\UrlRewriting.config" />
     <Content Include="Config\scripting.config" />
     <Content Include="Config\metablogConfig.config" />
@@ -391,6 +387,7 @@
     <Content Include="Config\ExamineSettings.config" />
     <Content Include="Config\BaseRestExtensions.config" />
     <Content Include="Config\404handlers.config" />
+    <Content Include="Config\uSyncCore.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
