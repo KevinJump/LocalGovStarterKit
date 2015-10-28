@@ -1,11 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Net.Http.Formatting;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Caching;
+using System.Xml.Serialization;
 using Umbraco.Core;
 using Umbraco.Core.Cache;
+using Umbraco.Core.Logging;
 using Umbraco.Core.Models;
 using Umbraco.Web;
 using Umbraco.Web.WebApi;
@@ -23,17 +29,34 @@ namespace Jumoo.LocalGov311
     /// </summary>
     public class InquiryController : UmbracoApiController
     {
-      
+
         // {apiroot}/
 
         /// <summary>
         /// gets all the services.
         /// </summary>
-        public ServiceList Get()
+        public HttpResponseMessage Get()
         {
-            Configuration.Formatters.XmlFormatter.UseXmlSerializer = true;
-            return GetServiceList();
+            var services = GetServiceList();
+
+            //
+            // we want to use the XmlSerializer - but we can't set that 
+            // globally because we will bork umbraco
+            // 
+            return GetReturnData(services);
         }
+
+        private HttpResponseMessage GetReturnData(ServiceList services)
+        {
+            XmlMediaTypeFormatter xmlFormatter = new XmlMediaTypeFormatter();
+            xmlFormatter.UseXmlSerializer = true;
+            var content = new ObjectContent<ServiceList>(services, xmlFormatter);
+            return new HttpResponseMessage()
+            {
+                Content = content
+            };
+        }
+
 
         // {apiroot/id}
 
@@ -43,7 +66,7 @@ namespace Jumoo.LocalGov311
         ///  this call, doesn't call the service cache, it calls
         ///  the umbraco objects and gets all teh info from there
         /// </summary>
-        public ServiceList Get(string id)
+        public HttpResponseMessage Get(string id)
         {
             var serviceList = new ServiceList();
 
@@ -73,8 +96,7 @@ namespace Jumoo.LocalGov311
                     break;
                 }
             }
-
-            return serviceList;
+            return GetReturnData(serviceList);
         }
 
         /// <summary>
@@ -148,7 +170,7 @@ namespace Jumoo.LocalGov311
 
             if (full)
             {
-                item.Description = node.GetPropertyValue<string>(fields.Description, "bodyText");
+                item.Description = node.GetPropertyValue<string>(fields.Description);
             }
 
             return item;

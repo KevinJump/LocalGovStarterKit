@@ -37,7 +37,9 @@ namespace Jumoo.LocalGov311
         // allows us to manage the cache as and when we need to.
         private void ContentServicePublishEvent(Umbraco.Core.Publishing.IPublishingStrategy sender, Umbraco.Core.Events.PublishEventArgs<Umbraco.Core.Models.IContent> e)
         {
-            throw new NotImplementedException();
+            // do the thing... 
+            // clears the open311 cache..
+            ApplicationContext.Current.ApplicationCache.RuntimeCache.ClearCacheItem(Open311Settings.Current.CacheName);
         }
     }
 }
