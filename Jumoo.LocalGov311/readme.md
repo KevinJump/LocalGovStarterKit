@@ -61,7 +61,8 @@ this package isn't part of the wider localgov starterkit just yet, you will need
 
 NuGet
 --
-Package coming soon.
+
+> Install-Package Open311.Umbraco -Pre
 
 Manual
 --
