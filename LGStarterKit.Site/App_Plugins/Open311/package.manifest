@@ -1,0 +1,6 @@
+﻿{
+	javascript: [
+		'~/App_Plugins/Open311/Jumoo.LocalGov311Controller.js',
+		'~/App_Plugins/Open311/Open311SettingService.js'
+	]
+}
