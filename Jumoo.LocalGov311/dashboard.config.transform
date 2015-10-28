@@ -1,0 +1,14 @@
+﻿<dashBoard>
+  <section alias="Open311Settings">
+    <areas>
+      <area>settings</area>
+    </areas>
+    <tab caption="Open311 Inquiry">
+      <control>
+        ~/App_Plugins/Open311/Open311Settings.html
+      </control>
+    </tab>
+  </section>
+</dashBoard>
+
+
