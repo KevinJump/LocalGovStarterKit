@@ -1,5 +1,5 @@
 Localgov Open311 - Inquiry API for Umbraco
---
+==
 
 An initial draft of the [Open311 Inquiry](wiki.open311.org/Inquiry_v1) protocol for umbraco sites. 
 
@@ -37,4 +37,48 @@ by default a call to /Open311/Inquiry/ will list all services with an ESD ID def
 
 you can also request a single serviice /Open311/Inquiry/123 and you get a slightly more detailed response (not all the open311 fields yet)
 
+```
+<services xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <service>
+    <id>123</id>
+    <service_name>Benefits and Grants</service_name>
+    <brief_description>
+      Including Benefits advice, Housing Benefits, Council tax support, education grants.
+    </brief_description>
+    <description>
+      <p>A more detailed description of the benefits and grants page.</p>
+    </description>
+    <modified>2015-10-28T12:38:15</modified>
+    <expiration>2025-10-28T12:38:30.0613358+00:00</expiration>
+    <url>http://localhost:55898/benefits-and-grants/</url>
+  </service>
+</services>
+```
 
+Installing
+==
+this package isn't part of the wider localgov starterkit just yet, you will need to install it seperately. 
+
+NuGet
+--
+Package coming soon.
+
+Manual
+--
+
+* copy the Jumoo.LocalGov311.dll to the bin folder
+* copy the contents of App_Plugins into App_Plugins on your site
+* add a dashboard section (below) to the end of dashboard.config to see the dashboard
+
+```
+  <section alias="Open311Settings">
+    <areas>
+      <area>settings</area>
+    </areas>
+    <tab caption="Open311">
+      <control>
+        ~/App_Plugins/Open311/Open311Settings.html
+      </control>
+    </tab>
+  </section>
+```
