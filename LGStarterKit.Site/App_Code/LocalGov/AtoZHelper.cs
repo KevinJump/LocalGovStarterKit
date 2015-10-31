@@ -10,6 +10,7 @@ using Umbraco.Core.Logging;
 using Umbraco.Core.Models;
 using Umbraco.Core.Publishing;
 using Umbraco.Core.Services;
+using Umbraco.Core.Cache;
 using Umbraco.Web;
 
 
@@ -50,7 +51,7 @@ namespace Jumoo.LocalGov
         {
             var cacheName = string.Format("AtoZPages_{0}", root.Id);
 
-            var appCache = ApplicationContext.Current.ApplicationCache;
+            var appCache = ApplicationContext.Current.ApplicationCache.RuntimeCache;
 
             SortedDictionary<string, AtoZInfo> azPages = appCache.GetCacheItem<SortedDictionary<string, AtoZInfo>>(cacheName);
 
@@ -85,7 +86,7 @@ namespace Jumoo.LocalGov
                 }
 
                 appCache.InsertCacheItem <SortedDictionary<string, AtoZInfo>>
-                    (cacheName, CacheItemPriority.Default, () => azPages);
+                    (cacheName, () => azPages, priority: CacheItemPriority.Default);
 
                 sw.Stop();
 
