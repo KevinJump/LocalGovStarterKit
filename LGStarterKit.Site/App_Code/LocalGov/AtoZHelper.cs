@@ -111,8 +111,11 @@ namespace Jumoo.LocalGov
         {
             SortedDictionary<string, AtoZInfo> AtoZ = GetAtoZPages(umbraco, exclude, root);
 
-            return new SortedDictionary<string, AtoZInfo>(AtoZ.Where(x => x.Key.ToLower().StartsWith(letter.ToLower()))
-                .ToDictionary(x => x.Key, x => x.Value));
+            var sorted = new SortedDictionary<string, AtoZInfo>();
+            var entries = AtoZ.Where(x => x.Key.ToLower().StartsWith(letter.ToLower()));
+            entries.ForEach(x => sorted.Add(x.Key, x.Value));
+
+            return sorted;
         }
     }
 
