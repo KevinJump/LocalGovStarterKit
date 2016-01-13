@@ -7,6 +7,11 @@
       <orgName>Jumoo.uSync.Core.dll</orgName>
     </file>
     <file>
+      <guid>uSyncCore.Config</guid>
+      <orgPath>/config</orgPath>
+      <orgName>uSyncCore.Config</orgName>
+    </file>
+    <file>
       <guid>Jumoo.OpeningSoon.dll</guid>
       <orgPath>/bin</orgPath>
       <orgName>Jumoo.OpeningSoon.dll</orgName>
@@ -488,7 +493,7 @@
   <info>
     <package>
       <name>LocalGovStarterKit</name>
-      <version>5.0</version>
+      <version>5.1.3</version>
       <license url="http://opensource.org/licenses/MIT">MIT License</license>
       <url>http://jumoo.uk/LocalGovStarterKit</url>
       <requirements>
@@ -501,12 +506,12 @@
       <name>Kevin Jump</name>
       <website>http://jumoo.uk</website>
     </author>
-    <readme><![CDATA[ LocalGov StarterKit 5 (Beta.2)
+    <readme><![CDATA[ LocalGov StarterKit 5.1.3
 ===========================
 A starter kit for service driven websites.
 Comes with settings for content, navigation, news, events and contact management. and you can even import existing navigation structures (like the LGNL)
 
-For best results install on a clean install of umbraco 7.2.6
+For best results install on a clean install of umbraco 7.3.x
 
 ]]></readme>
   </info>

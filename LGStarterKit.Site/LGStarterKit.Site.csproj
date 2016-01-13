@@ -98,6 +98,14 @@
       <HintPath>..\packages\UmbracoCms.Core.7.3.1\lib\interfaces.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Jumoo.uSync.BackOffice, Version=3.0.5751.25624, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\uSync.3.0.2\lib\net45\Jumoo.uSync.BackOffice.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Jumoo.uSync.BackOffice.UI, Version=3.0.5750.30839, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\uSync.3.0.2\lib\net45\Jumoo.uSync.BackOffice.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Jumoo.uSync.Core, Version=5.0.5752.26515, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\uSync.Core.5.0.1\lib\net45\Jumoo.uSync.Core.dll</HintPath>
       <Private>True</Private>
@@ -300,6 +308,7 @@
   <ItemGroup>
     <Content Include="App_Data\lgsk.imports\navigation_englishAndWelshServices.xml" />
     <Content Include="App_Data\lgsk.imports\navigation_scottishServices.xml" />
+    <Content Include="App_Plugins\uSync\BackOffice\uSyncBackOfficeDashboard.ascx" />
     <Content Include="Config\grid.editors.config.js" />
     <Content Include="css\bootstrap-theme.css" />
     <Content Include="css\bootstrap-theme.min.css" />
@@ -396,6 +405,7 @@
     <Content Include="Config\BaseRestExtensions.config" />
     <Content Include="Config\applications.config" />
     <Content Include="Config\404handlers.config" />
+    <Content Include="Config\uSyncBackOffice.Config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
