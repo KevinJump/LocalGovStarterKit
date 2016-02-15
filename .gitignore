@@ -13,6 +13,7 @@ Umbraco_Client/
 Bin/
 Config/
 Archive/
+Media/
 
 # Build results
 [Dd]ebug/
