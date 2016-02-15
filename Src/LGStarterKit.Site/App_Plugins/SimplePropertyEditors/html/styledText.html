@@ -1,0 +1,12 @@
+﻿<div ng-controller="simple.propEditor.styledTextController" class="simple-styledText-editor">
+
+    <div class="simple-label" ng-show="{{model.hideLabel}}">{{model.label}}</div>
+
+    <input ng-model="model.value" ng-change="checkCharLimit()" type="text"
+           class="umb-editor umb-textstring textstring simple-styledText"
+           style="{{model.config.style}}"
+           ng-class="{'simple-full' : model.hideLabel}" />
+
+    <div ng-bind="info" ng-class="getClass()" ng-show="limit > 0" class="char-warning umb-editor"></div>
+
+</div>
