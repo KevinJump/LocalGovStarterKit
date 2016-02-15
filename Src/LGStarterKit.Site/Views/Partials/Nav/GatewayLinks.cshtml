@@ -20,9 +20,11 @@
 @if (selection.Any())
 {
     @DisplaySectionTitle(mainName)
-    
+
+    var itemCount = 1; 
+
     <div class="row">
-        @foreach(var item in selection.Take(mainCount))
+        @foreach (var item in selection.Take(mainCount))
         {
             <div class="col-lg-4 col-sm-6">
                 <div class="gateway-item">
@@ -36,6 +38,21 @@
                     </div>
                 </div>
             </div>
+
+            if (itemCount > 1)
+            {
+                if (itemCount % 2 == 0)
+                {
+                    <div class="clearfix visible-sm-block"></div>
+                }
+
+                if (itemCount % 3 == 0)
+                {
+                    <div class="clearfix visible-lg-block"></div>
+                }
+            }
+            itemCount++;
+
         }
     </div>
     
