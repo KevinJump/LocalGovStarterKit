@@ -49,9 +49,12 @@ button.navbar-toggle {
 
 span.icon-bar-name {
     float: left;
-    padding-right: 5px;
     margin-top: -5px;
     color: #FFCCBC;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: transparent;
 }
 
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover
