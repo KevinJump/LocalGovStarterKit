@@ -12,6 +12,11 @@
     color: #212121;
 }
 
+.section-nav i.material-icons {
+    vertical-align: bottom;
+    padding-right: 0.2em;
+}
+
 .item-image {
     width: 100%;
     margin: 1em 0;
@@ -23,3 +28,19 @@
 }
 
 .btn a { color: #fff; }
+
+.grid-content img {
+    width: 100%;
+}
+
+.grid-content .caption {
+    font-style: italic;
+    text-align: center;
+    color: #aaa;
+}
+
+.grid-content blockquote {
+    font-size: 90%;
+    font-style: italic;
+}
+
