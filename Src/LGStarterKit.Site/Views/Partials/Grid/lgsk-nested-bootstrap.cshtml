@@ -8,30 +8,37 @@
 
 @if (Model != null && Model.sections != null)
 {
-    var oneColumn = ((System.Collections.ICollection)Model.sections).Count == 1;
-    
-    if (oneColumn)
-    {
-        foreach (var section in Model.sections) {
-            foreach (var row in section.rows) {
-                @renderRow(row, true);
-            }
-        }
-    }
-    else
-    {
-        <div class="row">
-            @foreach (var s in Model.sections)
+    <div class="grid-content">
+        @{
+
+            var oneColumn = ((System.Collections.ICollection)Model.sections).Count == 1;
+
+            if (oneColumn)
             {
-                <div class="col-md-@s.grid column">
-                    @foreach (var row in s.rows)
+                foreach (var section in Model.sections)
+                {
+                    foreach (var row in section.rows)
                     {
-                        @renderRow(row, false);
+                        @renderRow(row, true);
+                    }
+                }
+            }
+            else
+            {
+                <div class="row">
+                    @foreach (var s in Model.sections)
+                    {
+                        <div class="col-md-@s.grid column">
+                            @foreach (var row in s.rows)
+                            {
+                                @renderRow(row, false);
+                            }
+                        </div>
                     }
                 </div>
             }
-        </div>
-    }
+        }
+    </div>
 }
 
 @helper renderRow(dynamic row, bool singleColumn){
