@@ -8,7 +8,8 @@
 
 <img src="@Model.Content.GetCropUrl("featuredImage", "Featured")" class="item-image"/>
 
-@Umbraco.Field("bodyText")
+@CurrentPage.GetGridHtml("bodyText", "lgsk-nested-bootstrap")
+
 
 @section FullSideNav {
     <!-- full side nav - overrides parent sidenav.-->

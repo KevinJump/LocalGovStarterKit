@@ -7,7 +7,8 @@
 	<div class="col-xs-12">
 		
 		<h1 class="page-header">@Umbraco.Field("title")</h1>
-		@Umbraco.Field("bodyText")
+        @CurrentPage.GetGridHtml("bodyText", "lgsk-nested-bootstrap")
+
 		
 		@RenderBody()
 	</div>

@@ -3,6 +3,7 @@
     Layout = "SideNavPages.cshtml";
 }
 <h2 class="page-header">@Umbraco.Field("title")</h2>
-@Umbraco.Field("bodyText")
+@CurrentPage.GetGridHtml("bodyText", "lgsk-nested-bootstrap")
+
 
 @Html.Partial("Page/ContactDetails")

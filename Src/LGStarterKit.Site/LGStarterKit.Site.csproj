@@ -328,9 +328,35 @@
   <ItemGroup>
     <Content Include="App_Data\lgsk.imports\navigation_englishAndWelshServices.xml" />
     <Content Include="App_Data\lgsk.imports\navigation_scottishServices.xml" />
+    <Content Include="App_Plugins\AngularGoogleMaps\1.0.7\angular-google-maps.js" />
+    <Content Include="App_Plugins\AngularGoogleMaps\1.0.7\angular-google-maps.min.js" />
+    <Content Include="App_Plugins\AngularGoogleMaps\1.0.7\controller.js" />
+    <Content Include="App_Plugins\AngularGoogleMaps\1.0.7\coordinatesbehavour.html" />
+    <Content Include="App_Plugins\AngularGoogleMaps\1.0.7\defaultlocation.html" />
+    <Content Include="App_Plugins\AngularGoogleMaps\1.0.7\iconanchorpoint.html" />
+    <Content Include="App_Plugins\AngularGoogleMaps\1.0.7\iconsize.html" />
+    <Content Include="App_Plugins\AngularGoogleMaps\1.0.7\iconurl.html" />
+    <Content Include="App_Plugins\AngularGoogleMaps\1.0.7\underscore-min.js" />
+    <Content Include="App_Plugins\AngularGoogleMaps\1.0.7\view.css" />
+    <Content Include="App_Plugins\AngularGoogleMaps\1.0.7\view.html" />
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.controller.js" />
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.htm" />
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.resource.js" />
+    <Content Include="App_Plugins\OpeningSoon\Lang\da-DK.xml" />
+    <Content Include="App_Plugins\OpeningSoon\Lang\da.xml" />
+    <Content Include="App_Plugins\OpeningSoon\Lang\en-GB.xml" />
+    <Content Include="App_Plugins\OpeningSoon\Lang\en-US.xml" />
+    <Content Include="App_Plugins\OpeningSoon\Lang\en.xml" />
+    <Content Include="App_Plugins\OpeningSoon\Lang\en_us.xml" />
+    <Content Include="App_Plugins\OpeningSoon\OpeningSoon.Controller.js" />
+    <Content Include="App_Plugins\OpeningSoon\openingsoon.css" />
+    <Content Include="App_Plugins\OpeningSoon\openingsoon.html" />
+    <Content Include="App_Plugins\OpeningSoon\scripts\jquery.timepicker.css" />
+    <Content Include="App_Plugins\OpeningSoon\scripts\jquery.timepicker.js" />
+    <Content Include="App_Plugins\OpeningSoon\scripts\jquery.timepicker.min.js" />
+    <Content Include="App_Plugins\SimplePropertyEditors\css\styledText.css" />
+    <Content Include="App_Plugins\SimplePropertyEditors\html\styledText.html" />
+    <Content Include="App_Plugins\SimplePropertyEditors\js\styledTextController.js" />
     <Content Include="App_Plugins\uSync\uSyncDashboard.css" />
     <Content Include="App_Plugins\uSync\uSyncDashboard.html" />
     <Content Include="App_Plugins\uSync\uSyncDashboardController.js" />
@@ -434,6 +460,9 @@
     <Content Include="Config\404handlers.config" />
     <Content Include="Config\uSyncCore.config" />
     <Content Include="App_Plugins\uSync\package.manifest" />
+    <Content Include="App_Plugins\OpeningSoon\package.manifest" />
+    <Content Include="App_Plugins\SimplePropertyEditors\package.manifest" />
+    <Content Include="Views\Partials\Grid\lgsk-nested-bootstrap.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
