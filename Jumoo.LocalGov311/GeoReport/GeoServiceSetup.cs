@@ -14,6 +14,7 @@ namespace Jumoo.LocalGov311.GeoReport
     {
         protected override void ApplicationStarted(UmbracoApplicationBase umbracoApplication, ApplicationContext applicationContext)
         {
+            /*
             var db = applicationContext.DatabaseContext.Database;
 
             var creator = new DatabaseSchemaHelper(db, LoggerResolver.Current.Logger, SqlSyntaxContext.SqlSyntaxProvider);
@@ -23,7 +24,7 @@ namespace Jumoo.LocalGov311.GeoReport
 
             if (!creator.TableExist("ServiceAttributes"))
                 creator.CreateTable<ServiceAttribute>(false);
-            
+            */
         }
     }
 }
