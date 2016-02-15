@@ -9,6 +9,8 @@ using Umbraco.Web.Mvc;
 using Umbraco.Core;
 using Umbraco.Core.Cache;
 
+using Jumoo.LocalGov311.Inquiry;
+
 namespace Jumoo.LocalGov311
 {
     [PluginController("Open311")]
