@@ -3,7 +3,7 @@
 @using Newtonsoft.Json.Linq
 
 @* 
-    Razor helpers located at the bottom of this file
+    Razor helpers located at the bottom of this file 
 *@
 
 @if (Model != null && Model.sections != null)
@@ -41,7 +41,7 @@
     </div>
 }
 
-@helper renderRow(dynamic row, bool singleColumn){
+@helper renderRow(dynamic row, bool singleColumn) {
     <div @RenderElementAttributes(row)>
         <div class="row">
             @foreach (var area in row.areas)
@@ -68,22 +68,22 @@
         var attrs = new List<string>();
         JObject cfg = contentItem.config;
 
-        if(cfg != null)
+        if (cfg != null)
             foreach (JProperty property in cfg.Properties()) {
                 attrs.Add(property.Name + "=\"" + property.Value.ToString() + "\"");
             }
-                
+
         JObject style = contentItem.styles;
 
-        if (style != null) { 
-        var cssVals = new List<string>();
-        foreach (JProperty property in style.Properties())
-            cssVals.Add(property.Name + ":" + property.Value.ToString() + ";");
+        if (style != null) {
+            var cssVals = new List<string>();
+            foreach (JProperty property in style.Properties())
+                cssVals.Add(property.Name + ":" + property.Value.ToString() + ";");
 
-        if (cssVals.Any())
-            attrs.Add("style=\"" + string.Join(" ", cssVals) + "\"");
+            if (cssVals.Any())
+                attrs.Add("style=\"" + string.Join(" ", cssVals) + "\"");
         }
-            
+
         return new MvcHtmlString(string.Join(" ", attrs));
     }
 }
