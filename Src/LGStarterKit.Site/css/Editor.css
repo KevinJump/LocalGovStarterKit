@@ -2,32 +2,11 @@ body.mce-content-body {
 	font-family: 'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
 	font-size: 12pt;
 	padding: 5px;
-}/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */
-h2 {
-
 }
 
-h3 {
 
-}
+/**umb_name:Button Info*/
+.btn btn-info {}
 
-.btn btn-lg btn-primary {
-
-}
-
-.alert alert-info {
-
-}
-
-.alert alert-warning {
-
-}
-
-.alert alert-danger {
-
-}
-
-h4 {
-
-}
-
+/**umb_name:Heading*/
+fred fred fredfredfred{}
