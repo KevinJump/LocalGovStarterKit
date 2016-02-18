@@ -6,7 +6,7 @@
 
 .navbar-default {
     background-color: #F4511E; /* ORGANGE 600 */
-    border-bottom: none;
+    border-bottom: 4px solid #F4511E;
 
 	-moz-box-shadow: rgba(0,0,0,0.6) 0 0 12px -2px;
 	-webkit-box-shadow: rgba(0,0,0,0.6) 0 0 12px -2px;
