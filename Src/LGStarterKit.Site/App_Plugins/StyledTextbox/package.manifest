@@ -1,0 +1,60 @@
+﻿{
+	propertyEditors: [
+		{
+			alias: "Styled.TextBox",
+			name: "Styled TextBox",
+			icon: "icon-brush",
+			group: "common",
+			editor: {
+				valueType: "string",
+				view: "~/app_plugins/StyledTextbox/html/styledText.html"
+			},
+			prevalues: {
+				fields: [
+					{
+						label: "Style",
+						description: "Additional styles to apply",
+						key: "style",
+						view: "textarea"
+					},
+					{
+						label: "Placeholder",
+						description: "Placeholder text to put in box when empty",
+						key: "placeholder",
+						view: "textstring"
+					},
+					{
+						label: "Character Count",
+						description: "Number of characters before warning/limit is reached",
+						key: "charCount",
+						view: "number"
+					},
+					{
+						label: "Enforce Limit",
+						description: "Don't let editor go beyond count",
+						key: "enforceLimit",
+						view: "boolean"
+					},
+					{
+						label: "Full Width",
+						description: "Make the box go right accross the editor window (like a grid control does)",
+						key: "hideLabel",
+						view: "boolean",
+					}
+				]
+			},
+			defaultconfig: {
+				style: "font-size: 36px; line-height: 45px; font-weight: bold",
+				charCount: 0,
+				enforceLimit: 0,
+				hideLabel: 0
+			}
+		}
+	],
+	javascript: [
+		"~/App_Plugins/StyledTextbox/js/styledTextController.js"
+	],
+	css : [
+		"~/App_Plugins/StyledTextbox/css/styledText.css"
+	]
+}

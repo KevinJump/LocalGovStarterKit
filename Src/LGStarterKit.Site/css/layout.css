@@ -1,21 +1,21 @@
-﻿/*
-    layout - core stylesheet - imports all the others,
+/*
+    core css for the site. 
 
-    We use client dependency framework, so they all end up as one
-    minified stylesheet.
+    client dependency framework will minifiy and compress all our stylesheets
+    so if we just include them all in layout, then we only need refrence this
+    one stylesheet, but we still get everything small.
 */
 
+@import url('layout-cookie.css');
 @import url('layout-core.css');
-@import url('layout-navbar.css');
+@import url('layout-nav.css');
 @import url('layout-footer.css');
 @import url('layout-breadcrumb.css');
-@import url('layout-gateway.css');
 @import url('layout-atoz.css');
-
-@import url('layout-homepage.css');
-
-@import url('layout-page.css');
-
 @import url('layout-listings.css');
 
-@import url('layout-font-loading.css');
+
+@import url('layout-page.css');
+@import url('layout-gateway.css');
+
+@import url('layout-homepage.css');

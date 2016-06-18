@@ -1,0 +1,46 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using LGStarterKit.Utils;
+
+@{ 
+    var parent = Model.Content.Parent;
+    var siblings = Model.Content.Siblings()
+                        .Where(x => x.IsVisible() && !x.HasProperty("isComponent"));
+}
+
+@if (parent != null && siblings.Any())
+{
+    <div class="page-nav">
+        <h2>
+            <a href="@parent.Url">@parent.GetPropertyValue("title", parent.Name)</a>
+        </h2>
+        <ul class="nav nav-stacked nav-pills">
+            @foreach(var sibling in siblings)
+            {
+                <li class="@Umbraco.If(Model.Content.Id == sibling.Id, "active")">
+                    <a href="@sibling.Url">@sibling.GetPropertyValue("title", sibling.Name)</a>
+                    @if (Model.Content.Id == sibling.Id)
+                    {
+                        @DisplayChildren(Model.Content)
+                    }
+                </li>
+            }
+        </ul>
+    </div>
+}
+
+@helper DisplayChildren(IPublishedContent item)
+{
+    var children = item.Children().Where(x => x.IsVisible() && !x.HasProperty("isComponent"));
+
+    if (children.Any())
+    {
+            <ul class="nav nav-stacked nav-pills">
+                @foreach(var child in children)
+                {
+                    <li>
+                        <a href="@child.Url">@child.GetPropertyValue("title", child.Name)</a>
+                    </li>
+                }
+            </ul>
+    }
+}

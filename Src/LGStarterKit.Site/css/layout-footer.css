@@ -1,11 +1,33 @@
-﻿footer {
-    background-color: #424242;
-    color: #FAFAFA;
-    padding: 1em 0 3em;
-    margin-top: 1.5em;
+﻿footer { 
+    background-color: #444;
+    padding: 2em 0;
+    font-size: 75%;
+    color: #eee;
 }
 
-footer a, footer a:visited { color: #bdbdbd; }
-footer a:hover { color: #e0e0e0;}
 
-footer .site-credit { font-size: 0.75em; color: #9e9e9e; }
+footer a {
+    font-size: 110%;
+    color: #ddd;
+}
+
+footer a:hover, footer a:focus {
+    color: #fff;
+}
+
+.footer-links {
+    margin-bottom: 2em;
+}
+
+.footer-links li {
+    padding: 0 0.3em;
+}
+
+
+.site-credit {
+    color: #ddd;
+}
+.jumoo {
+    font-family:Pacifico;
+    margin-left: -5px;
+}

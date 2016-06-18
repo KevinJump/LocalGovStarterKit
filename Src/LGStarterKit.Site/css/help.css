@@ -1,41 +1,54 @@
-﻿/* stylesheet for the help section - just shows how you can change styles per section */
+﻿/*
+    Stylesheet for help section, just changes some of the accent colours
+    to show how you can change styles for sections 
 
-/*
-    Blue
-    500     #2196F3
-    50      #E3F2FD
-    100     #BBDEFB
-    200     #90CAF9
-    300     #64B5F6
-    400     #42A5F5
-    500     #2196F3
-    600     #1E88E5
-    700     #1976D2
-    800     #1565C0
-    900     #0D47A1
+    Base:  #388E3C (Green 700)
+    Dark:  #1B5E20 (Green 900)
+    Light: #81C784 (Green 300)
 */
 
-.homepage-header {
-    background-color: #1976D2;
+.navbar-default {
+    /* border-color: #1B5E20;*/
 }
 
-.homepage-highlights {
-    background-color: #0D47A1;
+.intro {
+    background-color: #388E3C; 
+    color: #fff;
 }
 
-.homepage-highlights h2 { 
-    border-color: #1976D2;
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:focus, 
+.navbar-default .navbar-nav>.active>a:hover
+{
+    /* background-color: #1B5E20; */
 }
 
-.navbar-default .navbar-nav>.active>a {
-    background-color: #0D47A1;
+.highlights {
+    background-color: #1B5E20;
 }
 
-nav.navbar.navbar-default {
-    border-bottom: 4px solid #0D47A1;
+.highlights h3 {
+    border-color: #388E3C;
 }
 
-.navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
-    background-color: #1565C0;
-    color: #ddd;
+a {
+    color: #388E3C;
 }
+
+a:hover, a:focus {
+    color: #1B5E20;
+}
+
+.page-nav h2 a, .page-nav h2 {
+    color: #1B5E20;
+}
+
+.pageContent h2, .pageContent h3 {
+    color: #1B5E20;
+}
+
+.atoz-footer {
+    background-color: #1B5E20;  
+}
+
+.atoz-footer li a, .atoz-footer li.active a { color: #ececec; }

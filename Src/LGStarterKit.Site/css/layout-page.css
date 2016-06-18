@@ -1,46 +1,43 @@
-﻿.content-body {
+﻿.page-nav h2 a, .page-nav h2 {
+    color: #BF360C; /* primary-dark */
+    text-decoration: none;
 }
 
-
-.section-nav ul ul
+.page-nav h2 a:hover, .page-nav h2 a:focus 
 {
-    border-left: 3px solid #337ab7;
-    background-color: #f1f1f1;
+    text-decoration: underline;
 }
 
-.section-nav h2 a {
-    color: #212121;
+.btn {
+    border-bottom: 0.3em solid rgba(0,0,0,0.2);
+    margin-bottom: 0.4em;
 }
 
-.section-nav i.material-icons {
-    vertical-align: bottom;
-    padding-right: 0.2em;
+.btn-primary {
+    background-color: #1565C0;
 }
 
-.item-image {
-    width: 100%;
-    margin: 1em 0;
-}
-
-.content-body h2, .content-body h3, .content-body h4 {
-    border-bottom: 1px solid #f1f1f1;
+.contact-list .glyphicon {
+    padding-right: 0.3em;
 
 }
 
-.btn a { color: #fff; }
-
-.grid-content img {
-    width: 100%;
+.pageContent h2, .pageContent h3 {
+    /* border-bottom: 1px solid #eee; */
 }
 
-.grid-content .caption {
-    font-style: italic;
-    text-align: center;
-    color: #aaa;
+.pageContent img {
+    max-width: 100%;
+    margin-bottom: 1em;
 }
 
-.grid-content blockquote {
-    font-size: 90%;
-    font-style: italic;
+.core-content img {
+    box-shadow: rgba(0,0,0,0.2) 0 3px 3px;   
 }
 
+legend { 
+    font-family: 'Ubuntu', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    font-size: 24px; 
+    border-bottom: none;
+}

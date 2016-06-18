@@ -1,46 +1,39 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{ 
+    // display all the contact details.
 
-@{
-    // this page hand rolls a contact form,
-    // and uses a basic surface controller to 
-    // do some sending of emails
-    //
-    // you might want to use Umbraco Forms
-    //
-
-    @DisplayContactForm("Email", "emailAddress")
-
-    @DisplayContactMethod("Telephone", "telephoneNumber")
-
-    @DisplayContactMethod("Address", "address")
-
+    // this page hand rolls the contact form
+    // you might want to insert your favorite
+    // form based thing here
 }
+@DisplayContactForm("Email", "emailAddress")
+@DisplayContactMethod("Telephone", "telephoneNumber")
+@DisplayContactMethod("Address", "address")
 
-@helper DisplayContactMethod(string title, string propertyName)    
+@helper DisplayContactMethod(string title, string property)
 {
-    if (Model.Content.HasValue(propertyName))
+    if (Model.Content.HasValue(property))
     {
         var displayTitle = Umbraco.GetDictionaryValue("Contact." + title);
-        if ( string.IsNullOrEmpty(displayTitle))
+        if (string.IsNullOrEmpty(displayTitle))
         {
             displayTitle = title;
         }
-        var detail = Umbraco.ReplaceLineBreaksForHtml(Model.Content.GetPropertyValue<string>(propertyName));       
-        
+
+        var detail = Umbraco.ReplaceLineBreaksForHtml(Model.Content.GetPropertyValue<string>(property));
+
         <div class="contact-item" id="@title">
-            <h3 class="page-header">@displayTitle</h3>
+            <h3>@displayTitle</h3>
             @Html.Raw(detail)
         </div>
     }
 }
-    
 
 @helper DisplayContactForm(string title, string emailProperty)
 {
     var emailAddress = Model.Content.GetPropertyValue<string>(emailProperty);
-    // use a controller - to send the email...
-    @Html.Partial("Page/ContactForm", new Jumoo.LocalGov.ContactViewModel() {
-        ToAddress = emailAddress
-        })
-}
-    
+    @Html.Partial("Page/ContactForm", new LGStarterKit.Contact.ContactViewModel()
+                    {
+                        ToAddress = emailAddress
+                    })
+}z

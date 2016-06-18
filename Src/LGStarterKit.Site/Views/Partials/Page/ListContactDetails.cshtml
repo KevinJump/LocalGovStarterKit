@@ -1,0 +1,52 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    if (!Model.Content.HasValue("contactDetails"))
+    {
+        return;
+    }
+
+    var contactId = Model.Content.GetPropertyValue<int>("contactDetails");
+    if (contactId > 0)
+    {
+        var contactItem = Umbraco.TypedContent(contactId);
+        if (contactItem != null)
+        {
+            <div class="page-nav">
+                <h2>@Umbraco.GetDictionaryValue("Contact")</h2>
+                <ul class="nav nav-stacked nav-pills contact-list">
+                    @if (contactItem.HasValue("telephoneNumber"))
+                    {
+                        <li>
+                            <a href="@contactItem.Url#telephone">
+                                <i class="glyphicon glyphicon-earphone"></i>
+                                @Umbraco.GetDictionaryValue("Contact.Telephone")
+                            </a>
+                        </li>
+                    }
+
+                    @if (contactItem.HasValue("emailAddress"))
+                    {
+                        <li>
+                            <a href="@contactItem.Url#email">
+                                <i class="glyphicon glyphicon-envelope"></i>
+                                @Umbraco.GetDictionaryValue("Contact.Email")
+                            </a>
+                        </li>
+                    }
+
+                    @if (contactItem.HasValue("Address"))
+                    {
+                        <li>
+                            <a href="@contactItem.Url#address">
+                                <i class="glyphicon glyphicon-globe"></i>
+                                @Umbraco.GetDictionaryValue("Contact.Address")
+                            </a>
+                        </li>
+                    }
+
+                </ul>
+            </div>
+        }
+    }
+}
+

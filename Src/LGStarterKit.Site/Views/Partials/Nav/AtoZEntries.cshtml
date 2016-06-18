@@ -1,29 +1,29 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
-@using Jumoo.LocalGov;
-@{
-    var letterQs = Request.QueryString["letter"];
-    if (!string.IsNullOrWhiteSpace(letterQs))
+@using LGStarterKit.AtoZ
+@{ 
+    var queryLetter = Request.QueryString["letter"];
+    if (!string.IsNullOrWhiteSpace(queryLetter))
     {
-        var letter = letterQs.Substring(0,1);
-        <h2 class="page-header">@letter</h2>
-    
-        var entries = Umbraco.GetAtoZEntries(letter);
+        var letter = queryLetter.Substring(0, 1);
         
+        <h2>@letter</h2>
+
+        var entries = Umbraco.GetAtoZEntries(letter);
+
         if (entries.Any())
         {
             <ul class="atoz-entries">
                 @foreach(var entry in entries)
                 {
                     <li>
-                        <a href="@entry.Value.Url">@entry.Key</a>
+                        <a href="@entry.Value.url">@entry.Key</a>
                     </li>
                 }
             </ul>
         }
         else
         {
-            <div class="alert alert-warning">No entries</div>
+            <div class="alert alert-warning">No entries for @letter</div>
         }
     }
-    
 }

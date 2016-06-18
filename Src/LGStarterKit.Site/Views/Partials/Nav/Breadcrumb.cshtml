@@ -4,10 +4,10 @@
     var selection = Model.Content.Ancestors();
 }
 
-@if( selection.Any() )
+@if (selection.Any())
 {
     <ul class="breadcrumb">
-        @foreach(var item in selection.OrderBy("Level"))
+        @foreach (var item in selection.OrderBy("Level"))
         {
             if (item.IsVisible())
             {

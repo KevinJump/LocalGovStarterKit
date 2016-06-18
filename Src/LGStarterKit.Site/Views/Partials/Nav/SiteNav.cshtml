@@ -1,0 +1,48 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@{ 
+
+    string listClass = (string)ViewData["listClass"] ?? "nav navbar-nav navbar-right" ;
+
+
+    bool showHome = false; // flag to show the root on the menu
+
+    Dictionary<string, string> selection = new Dictionary<string, string>();
+
+    var siteRoot = Model.Content.AncestorOrSelf(1); // top level from here
+
+    if (showHome)
+    {
+        selection.Add("/", siteRoot.GetPropertyValue<string>("sectionName", siteRoot.Name));
+    }
+
+    string currentUrl = Model.Content.Url;
+    string currentRoot = currentUrl.Substring(0, currentUrl.IndexOf('/', 1) + 1);
+
+    var sections = siteRoot.Children().Where(x => x.IsVisible() && x.DocumentTypeAlias == "sectionHomepage");
+
+    if (sections.Any())
+    {
+        foreach(var section in sections)
+        {
+            selection.Add(section.Url, section.GetPropertyValue<string>("sectionName", section.Name));
+        }
+    }
+
+    if (!selection.ContainsKey(currentRoot))
+    {
+        currentRoot = "/";
+    }
+}
+
+@if (selection.Any())
+{
+    <ul class="@listClass">
+        @foreach (var item in selection)
+        {
+            <li class="@Umbraco.If(item.Key == currentRoot, "active")">
+                <a href="@item.Key" class="@item.Key.Trim("/")">@item.Value</a>
+            </li>
+        }
+    </ul>
+}

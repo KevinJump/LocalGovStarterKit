@@ -1,10 +1,10 @@
-﻿.gateway-item {
+﻿.gateway-links {
 
-    margin: 10px 0;
-    min-height: 100px;
 }
 
-.gateway-title {
-    padding-bottom: 5px;
-    border-bottom: 1px solid #eee;
+.gateway-item {
+    margin: 1.6em 0 0.4em;
+}
+
+.gateway-item>span {
 }

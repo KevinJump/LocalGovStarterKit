@@ -1,0 +1,15 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = "SideNavPages.cshtml";
+}
+
+@section FullSideNav {
+    
+    @Html.Partial("Nav/ListLatestItems")
+}
+
+<h2>@Umbraco.Field("title")</h2>
+@CurrentPage.GetGridHtml("content", "lgsk-nested-bootstrap")
+
+
+@Html.Partial("Page/LatestItems")

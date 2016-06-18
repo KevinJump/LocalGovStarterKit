@@ -1,0 +1,17 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = "SideNavPages.cshtml";
+}
+
+@section FullSideNav {
+
+    @Html.Partial("Nav/ListLatestItems")
+}
+
+<div class="listing-item-title">
+    <h2>@Umbraco.Field("title")</h2>
+    @Html.Partial("Page/DisplayItemDateRange")
+    <img src="@Model.Content.GetCropUrl("image", "Full")">
+</div>
+
+@CurrentPage.GetGridHtml("content", "lgsk-nested-bootstrap")

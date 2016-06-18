@@ -1,0 +1,71 @@
+﻿.navbar-default {
+    margin-bottom: 0;
+    border-radius: 0;
+    border: none;
+
+    background-color: #D93D0C; /* primary - base */
+    color: #fff; 
+    border-bottom: 0.3em solid rgba(0,0,0,0.2);
+}
+
+.navbar-default a { 
+    text-decoration: none;
+}
+
+.navbar-default a:hover { 
+    text-decoration: underline;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: underline;
+}
+
+.navbar-default .navbar-nav>li>a
+{
+    color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a:focus, 
+.navbar-default .navbar-nav>li>a:hover
+{
+    color: #fff;
+    background-color: #BF360C; /* primary-dark */
+}
+
+.navbar-default .navbar-brand:focus, 
+.navbar-default .navbar-brand 
+{
+    color: #fff;
+}
+
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:hover {
+    color: #fff;
+    background-color: #BF360C; /* primary-dark */
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover
+{
+    color: #fff;
+    background-color: #BF360C; /* primary-dark */
+}
+
+.navbar-default .navbar-form {
+    margin-bottom: 0;
+}
+
+
+.nav-pills>li.active>a, 
+.nav-pills>li.active>a:focus,
+.nav-pills>li.active>a:hover
+{
+    background-color: #ccc;
+    /* border-bottom: 0.3em solid rgba(0,0,0,0.2); */
+    color: #222;
+}
+
+.navbar-default .btn {
+    border: 1px solid #ccc;
+}

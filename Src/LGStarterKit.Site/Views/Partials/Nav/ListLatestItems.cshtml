@@ -1,0 +1,36 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@{ 
+    var listRoot = Model.Content.AncestorOrSelf("listingPage");
+
+    if (listRoot == null)
+    {
+        return;
+    }
+
+    var selection = listRoot.Descendants()
+        .Where(x => x.IsVisible() && !x.HasProperty("isComponent"))
+        .OrderByDescending(x => x.GetPropertyValue<DateTime>("endDate", x.CreateDate));
+}
+
+@if( selection.Any() )
+{
+    <div class="page-nav">
+        <h2>
+            <a href="@listRoot.Url">
+                Latest @listRoot.GetPropertyValue("title", listRoot.Name)
+            </a>
+        </h2>
+
+        <ul class="nav nav-stacked nav-pills">
+            @foreach(var item in selection.Take(7))
+            {
+                <li class="@Umbraco.If(Model.Content.Id == item.Id, "active")">
+                    <a href="@item.Url">
+                        @item.GetPropertyValue("title", item.Name)
+                    </a>
+                </li>
+            }
+        </ul>
+    </div>
+}

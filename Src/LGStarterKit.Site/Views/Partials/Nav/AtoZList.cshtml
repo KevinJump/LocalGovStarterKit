@@ -1,21 +1,26 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 
-@* writes out the letters (and links)*@
+@* just writes out the letters atoz *@
 
-@{
-    
-    var atozPage = Umbraco.TypedContentAtXPath("//Atoz").FirstOrDefault();
+@{ 
+    var atozPage = Umbraco.TypedContentAtXPath("//atoZ").FirstOrDefault();
     if (atozPage == null)
-    { 
+    {
         return;
     }
-}
 
+    var activeLetter = ' ';
+    var queryLetter = Request.QueryString["letter"];
+    if (!string.IsNullOrWhiteSpace(queryLetter))
+    {
+        activeLetter = queryLetter[0];
+    }
+}
 <div class="atoz-block">
     <ul class="list-inline list-atoz">
-        @for(char letter='A'; letter < 'Z'; letter++)
+        @for (char letter='A'; letter <= 'Z'; letter++)
         {
-            <li>
+            <li class="@Umbraco.If(letter == activeLetter, "active")">
                 <a href="@atozPage.Url?letter=@letter">@letter</a>
             </li>
         }

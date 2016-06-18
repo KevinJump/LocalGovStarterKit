@@ -1,0 +1,32 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = null;
+}
+@* simple redirect template, pushes a page to another location *@
+@*
+    use redirects when you want navigation items to appear in 
+    diffrent locations.
+
+    for aliases, and shorter urls, use the umbracoUrlAlias 
+    property on a node - this will serve a page up on 
+    an alias url, without having to create the nodes
+*@
+@{
+
+    if (Model.Content.HasValue("externalRedirect"))
+    {
+        var url = Model.Content.GetPropertyValue<string>("externalRedirect");
+        Response.Redirect(url);
+    }
+    else
+    {
+        var node =
+            Umbraco.TypedContent(Model.Content.GetPropertyValue<int>("internalRedirect", 0));
+
+        if (node != null)
+        {
+            Response.Redirect(node.Url);
+        }
+
+    }
+}

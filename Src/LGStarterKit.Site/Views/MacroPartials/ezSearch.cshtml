@@ -4,6 +4,8 @@
 @using Examine
 @using Umbraco.Core.Logging
 @using Umbraco.Web.Models
+@using Newtonsoft.Json;
+
 @inherits Umbraco.Web.Macros.PartialViewMacroPage
 @{
     int parsedInt;
@@ -231,7 +233,8 @@
         <h2><a href="@result.Url">@result.Name</a></h2>
         @foreach (var field in model.PreviewFields.Where(field => result.HasValue(field)))
         {
-            <p>@Highlight(Truncate(Umbraco.StripHtml(result.GetPropertyValue(field).ToString()), model.PreviewLength), model.SearchTerms)</p>
+            <p>@Highlight(Truncate(Umbraco.StripHtml(
+              GetGridStrings(result.GetPropertyValue(field).ToString())), model.PreviewLength), model.SearchTerms)</p>
             break;
         }
     </div>
@@ -289,7 +292,7 @@
     // ==================================================
     //  Helper Functions
     //==================================================
-    
+
     // Cleanse the search term
     public string CleanseSearchTerm(string input)
     {
@@ -310,26 +313,26 @@
     {
         return Highlight(input.ToString(), searchTerms);
     }
-    
+
     // Highlights all occurances of the search terms in a body of text
     public IHtmlString Highlight(string input, IEnumerable<string> searchTerms)
     {
         input = HttpUtility.HtmlDecode(input);
-        
+
         foreach (var searchTerm in searchTerms)
         {
             input = Regex.Replace(input, Regex.Escape(searchTerm), @"<strong>$0</strong>", RegexOptions.IgnoreCase);
         }
-        
+
         return new HtmlString(input);
     }
-    
+
     // Formats a string and returns as HTML
     public IHtmlString FormatHtml(string input, params object[] args)
     {
         return Html.Raw(string.Format(input, args));
     }
-    
+
     // Gets a dictionary value with a fallback
     public string GetDictionaryValue(string key, string fallback)
     {
@@ -391,7 +394,7 @@
             return fallback;
         }
     }
-    
+
     // Splits a coma seperated string into a list
     public IList<string> SplitToList(string input)
     {
@@ -399,12 +402,51 @@
             .Select(f => f.Trim())
             .Where(f => !string.IsNullOrEmpty(f))
             .ToList();
-    } 
+    }
+
+
+    // additional grid stuff
+    public bool IsJson(string input)
+    {
+        input = input.Trim();
+        return (input.StartsWith("{") && input.EndsWith("}"))
+            || (input.StartsWith("[") && input.EndsWith("]"));
+    }
+
+    public string GetGridStrings(string input)
+    {
+        if (!IsJson(input))
+            return input;
+
+        var json = JsonConvert.DeserializeObject<dynamic>(input);
+        var text = "";
+
+        foreach(var section in json.sections)
+        {
+            foreach(var row in section.rows)
+            {
+                foreach(var area in row.areas)
+                {
+                    foreach(var control in area.controls)
+                    {
+                        if (control.editor != null && control.editor.alias != null && control.editor.alias == "rte")
+                        {
+                            text += control.value;
+                        }
+                    }
+                }
+            }
+        }
+
+        return text;
+    }
+
+
 
     // ==================================================
     //  Helper Classes
     //==================================================
-    
+
     public class SearchViewModel
     {
         // Query Parameters

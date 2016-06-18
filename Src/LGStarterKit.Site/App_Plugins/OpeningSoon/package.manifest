@@ -3,6 +3,8 @@
 		{
 			alias: "Jumoo.OpeningSoon",
 			name: "Opening Soon",				
+			icon: "icon-time",
+			group: "lists",	
 			editor: {
 				valueType: "JSON",
 				view: "~/App_Plugins/OpeningSoon/OpeningSoon.html"
@@ -36,7 +38,7 @@
 				]
 			},
 			defaultConfig: {
-				SecondSet: 0,
+				SecondSet: false,
 				dropdownTimestep: 30,
 				enableAutofill: 1,
 				enableClear: 1

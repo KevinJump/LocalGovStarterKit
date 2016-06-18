@@ -8,7 +8,7 @@
         var startDate = Model.Content.GetPropertyValue<DateTime>("startDate", Model.Content.CreateDate);
         var endDate = Model.Content.GetPropertyValue<DateTime>("endDate", DateTime.MinValue);
 
-        @DisplayDateRange(startDate, endDate, Model.Content.DocumentTypeAlias != "NewsItem") @* we don't display the time if it's news*@
+        @DisplayDateRange(startDate, endDate, Model.Content.DocumentTypeAlias != "newsItem") @* we don't display the time if it's news*@
     }
 
 

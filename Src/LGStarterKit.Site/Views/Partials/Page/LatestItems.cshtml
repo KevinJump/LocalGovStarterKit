@@ -1,0 +1,95 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@{ 
+    // lists pages undeneath by date. 
+
+    var selection = Model.Content.Descendants()
+        .Where(x => x.IsVisible() && !x.HasProperty("isComponent"))
+        .OrderByDescending(x => x.GetPropertyValue<DateTime>("endDate", x.CreateDate));
+
+}
+
+@if(selection.Any())
+{
+
+    <div class="item-listing">
+        @foreach(var item in selection)
+        {
+            @DisplayItem(item)
+        }
+    </div>
+}
+
+@helper DisplayItem(IPublishedContent item)
+{
+    var start = item.GetPropertyValue<DateTime>("startDate", DateTime.MinValue);
+    var end = item.GetPropertyValue<DateTime>("endDate", DateTime.MinValue);
+
+    <div class="listing-item">
+        <div class="listing-header">
+            <h3><a href="@item.Url">@item.GetPropertyValue("title", item.Name)</a></h3>
+            @DisplayDateRange(start, end, item.DocumentTypeAlias != "newsItem")
+        </div>
+        <div class="listing-body">
+            @Html.Raw(
+                Umbraco.ReplaceLineBreaksForHtml(item.GetPropertyValue<string>("summary"))
+            )
+            
+        </div>
+        <!--
+        <div class="listing-footer">
+            <a href="@item.Url">more &raquo;</a>
+        </div>
+        -->
+    </div>
+}
+
+@helper DisplayDateRange(DateTime startDate, DateTime endDate, bool showTime = true, bool showEnd = true )
+{
+    var dayFormat = "dddd d MMMM yyyy";
+    var hourFormat = "h:mm tt";
+
+    // does a from - to thing.
+    var dateDisplayString = "";
+
+    if (startDate != DateTime.MinValue)
+    {
+        dateDisplayString = startDate.ToString(dayFormat);
+
+        if (showEnd && endDate != DateTime.MinValue)
+        {
+            if (startDate.ToString("ddMMyyyy") != endDate.ToString("ddMMyyyy"))
+            {
+                // not the same day.
+                dateDisplayString += " to " + endDate.ToString(dayFormat);
+            }
+            else if (showTime && startDate.ToString("hhmm") != "0000")
+            {
+                // we also have a time
+                dateDisplayString += " (" + startDate.ToString(hourFormat);
+
+                if (endDate.ToString("hhmm") != startDate.ToString("hhmm"))
+                {
+                    // end date has time and is different
+                    dateDisplayString += " - " + endDate.ToString(hourFormat);
+                }
+            }
+        }
+        else
+        {
+            // no end date, just a start one...
+            if (showTime && startDate.ToString("hhmm") != "0000")
+            {
+                dateDisplayString += " (" + startDate.ToString(hourFormat);
+            }
+        }
+
+        // end if there was a time, we need to wrap the final ) in the string
+        if (showTime && startDate.ToString("hhmm") != "0000")
+        {
+            dateDisplayString += ")";
+        }
+    }
+
+    <span class="listing-date">@dateDisplayString</span>
+}

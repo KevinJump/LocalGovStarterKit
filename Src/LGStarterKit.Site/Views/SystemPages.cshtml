@@ -1,15 +1,17 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
-    Layout = "SiteDesign.cshtml";
+	Layout = "Design.cshtml";
 }
 
-<div class="row">
-	<div class="col-xs-12">
-		
-		<h1 class="page-header">@Umbraco.Field("title")</h1>
-        @CurrentPage.GetGridHtml("bodyText", "lgsk-nested-bootstrap")
+<h2>@Umbraco.Field("title")</h2>
+@CurrentPage.GetGridHtml("content", "lgsk-nested-bootstrap")
 
-		
-		@RenderBody()
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+			@RenderBody()
+		</div>
 	</div>
 </div>

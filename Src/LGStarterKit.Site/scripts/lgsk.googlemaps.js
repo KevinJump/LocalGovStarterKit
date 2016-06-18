@@ -5,18 +5,15 @@
  * to draw the map.
  */
 
-function LoadGoogleMaps(cb)
-{
+function LoadGoogleMaps(cb) {
     google.load('maps', '3', {
         callback: cb,
         other_params: "sensor=false"
     });
 }
 
-function AddVenueToMap()
-{
-    if ($("#map_canvas").length)
-    {
+function AddVenueToMap() {
+    if ($("#map_canvas").length) {
         var mapElement = $('#map_canvas');
 
         var mapZoom = mapElement.data('zoom');
@@ -26,8 +23,7 @@ function AddVenueToMap()
         var address = mapElement.data('venue-address');
 
         var infoHtml = name;
-        if (address && address.length != 0)
-        {
+        if (address && address.length != 0) {
             infoHtml = name + '<br/>' +
                 '<a href="https://maps.google.com/maps/dir//' +
                 mapLat + ',' + mapLng + '">directions</a>';

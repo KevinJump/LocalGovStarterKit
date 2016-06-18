@@ -1,0 +1,32 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@{ 
+    if (!Model.Content.HasValue("serviceAlerts"))
+    {
+        return;
+    }
+
+    var alertIds = Model.Content.GetPropertyValue<string>("serviceAlerts", "")
+        .Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+
+    var selection = Umbraco.TypedContent(alertIds).Where(x => x != null);
+}
+
+@if (selection.Any())
+{
+    foreach (var alert in selection)
+    {
+        var alertType = alert.GetPropertyValue<string>("alertType").ToLower();
+
+        <div class="alert alert-@alertType service-alert">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3>@alert.GetPropertyValue("title", alert.Name)</h3>
+                        @alert.GetPropertyValue("bodyText")
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}

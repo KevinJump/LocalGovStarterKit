@@ -1,0 +1,57 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@{
+    if ( !Model.Content.HasValue("newsRoot"))
+    {
+        return;
+    }
+
+    var listRoot =
+        Umbraco.TypedContent( Model.Content.GetPropertyValue<int>("newsRoot"));
+
+
+    if (listRoot == null)
+    {
+        return;
+    }
+
+    var selection = listRoot.Descendants()
+        .Where(x => x.IsVisible() && !x.HasProperty("isComponent"))
+        .OrderByDescending(x => x.GetPropertyValue<DateTime>("endDate", x.CreateDate));
+}
+
+@if (selection.Any())
+{
+    <div class="promo-block">
+        <h2><a href="@listRoot.Url">News</a></h2>
+        <div class="row">
+            @foreach (var item in selection.Take(2))
+            {
+                <div class="col-xs-12 col-md-6">
+                    <div class="promo-item">
+                        @DisplayImage(item)
+                        <h3>
+                            <a href="@item.Url">
+                                @item.GetPropertyValue("title", item.Name)
+                            </a>
+                        </h3>
+                        @Html.Raw(
+                            Umbraco.ReplaceLineBreaksForHtml(item.GetPropertyValue<string>("summary"))
+                        )
+                    </div>
+                </div>
+
+            }
+        </div>
+    </div>
+
+}
+
+@helper DisplayImage(IPublishedContent item)
+{
+    if (item.HasProperty("image") && item.HasValue("image"))
+    {
+        var imageUrl = item.GetCropUrl("image", "Homepage");
+        <img src="@imageUrl" alt="@item.GetPropertyValue("title", item.Name)">
+    }
+}

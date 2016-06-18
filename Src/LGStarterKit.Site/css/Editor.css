@@ -1,12 +1,35 @@
+@import url('../Content/bootstrap.min.css');
+@import url('//fonts.googleapis.com/css?family=Roboto:400,700|Ubuntu:400,700');
+
 body.mce-content-body {
-	font-family: 'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
-	font-size: 12pt;
-	padding: 5px;
+    font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12pt;
+    background-color: #fdfdfd;
+    padding: 0.5em;
 }
 
+/* these don't work in umbraco issue #U4-7160 
+   but that might be fixed soon ???
+*/
 
 /**umb_name:Button Info*/
-.btn-info {}
+.btn btn-lg btn-primary{}
+
+/**umb_name:Button Success*/
+.btn btn-lg btn-success{}
+
+/**umb_name:Button Warning*/
+.btn btn-lg btn-warning{}
+
+/**umb_name:Button Danger*/
+.btn btn-lg btn-danger{}
+
 
 /**umb_name:Heading*/
-fred fred fredfredfred{}
+h2{}
+
+/**umb_name:Heading 2*/
+h3{}
+
+/**umb_name:Heading 3*/
+h4{}

@@ -1,45 +1,48 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Jumoo.LocalGov.ContactViewModel>
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<LGStarterKit.Contact.ContactViewModel>
 
-@{
-    var displayTitle = Umbraco.GetDictionaryValue("Contact.Email");
-    if (string.IsNullOrEmpty(displayTitle))
+@{ 
+    var title = Umbraco.GetDictionaryValue("Contact.Email");
+    if (string.IsNullOrEmpty(title))
     {
-        displayTitle = "Online";
+        title = "Online";
     }
-
 }
 
-@using (Html.BeginUmbracoForm<Jumoo.LocalGov.ContactFormSurfaceController>("SendContact", null, new { @class = "form-horizontal" }))
+@using (Html.BeginUmbracoForm<LGStarterKit.Contact.ContactFormSurfaceController>(
+                                                            "SendContactEmail",
+                                                            null,
+                                                            new { @class = "form-horizontal" }))
 {
+
     <fieldset>
-        <h3 class="page-header">@displayTitle</h3>
+        <legend>@title</legend>
 
         <div class="form-group">
-            @Html.LabelFor(x => Model.Name, new { @class = "control-label col-sm-3" })
+            @Html.LabelFor(x => x.Name, new { @class = "control-label col-sm-3" })
             <div class="col-sm-9">
-                @Html.TextBoxFor(x => Model.Name, new { @class = "form-control" })
-                @Html.ValidationMessageFor(x => Model.Name)
+                @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Name)
             </div>
         </div>
         <div class="form-group">
-            @Html.LabelFor(x => Model.Email, new { @class = "control-label col-sm-3" })
+            @Html.LabelFor(x => x.Email, new { @class = "control-label col-sm-3" })
             <div class="col-sm-9">
-                @Html.TextBoxFor(x => Model.Email, new { @class = "form-control" })
-                @Html.ValidationMessageFor(x => Model.Email)
+                @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Email)
             </div>
         </div>
         <div class="form-group">
-            @Html.LabelFor(x => Model.Message, new { @class = "control-label col-sm-3" })
+            @Html.LabelFor(x => x.Message, new { @class = "control-label col-sm-3" })
             <div class="col-sm-9">
-                @Html.TextAreaFor(x => Model.Message, 10, 50, new { @class = "form-control" })
-                @Html.ValidationMessageFor(x => Model.Message)
+                @Html.TextAreaFor(x => x.Message, 10, 50, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Message)
             </div>
         </div>
 
-        @Html.HiddenFor(x => Model.ToAddress)
+        @Html.HiddenFor(x => x.ToAddress)
 
         <div class="col-sm-9 col-sm-offset-3">
-            <input type="submit" class="btn btn-primary btn-lg" value="Send" />
+            <input type="submit" class="btn btn-lg btn-primary" value="send" />
         </div>
     </fieldset>
 }

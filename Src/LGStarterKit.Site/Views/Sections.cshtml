@@ -1,14 +1,10 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
-    Layout = "SiteDesign.cshtml";
+	Layout = "Design.cshtml";
 }
 
-@section Metadata { @RenderSection("Metadata", false) }
+@section Breadcrumb {  } @* section homepages don't have breadcrumbs *@
 
-@section Breadcrumb { <!-- no breadcrumb --> }
-
-@section PageHeader { @RenderSection("PageHeader", false) }
+@section PageHeader { @RenderSection("PageHeader", required: false) }
 
 @RenderBody()
-
-@section Footer { @RenderSection("Footer", false) }

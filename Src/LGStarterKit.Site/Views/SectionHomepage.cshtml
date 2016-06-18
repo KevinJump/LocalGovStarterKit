@@ -1,32 +1,39 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
-    Layout = "Sections.cshtml";
+	Layout = "Sections.cshtml";
 }
+
 @section PageHeader {
-    <div class="homepage-header">
+    <div class="intro">
         <div class="container">
             <div class="row">
-                <div class="col-sm-7">
-                    <div class="homepage-banner">
-                        <h1>@Umbraco.Field("title")</h1>
-                        @CurrentPage.GetGridHtml("bodyText", "lgsk-nested-bootstrap")
+                <div class="col-sm-8 col-xs-12">
+                    <h1>@Umbraco.Field("title")</h1>
+                    <div>
+                        @CurrentPage.GetGridHtml("content", "lgsk-nested-bootstrap")
                     </div>
                 </div>
-                <div class="col-sm-4 col-sm-offset-1">
-                    <div class="homepage-highlights hidden-sm hidden-xs">
-                        @Html.Partial("Homepage/Highlights")
-                    </div>
+                <div class="col-sm-4 hidden-xs">
+                    @Html.Partial("Components/Highlights")
                 </div>
             </div>
         </div>
     </div>
 }
 
-<div class="homepage-links">
-    @Html.Partial("Nav/GatewayLinks", Model,
-                    new ViewDataDictionary()
-                    {
-                        {"mainCount", 21}
-                    }
-    )
+<div class="section-links">
+    @Html.Partial("Nav/GatewayLinks")
 </div>
+
+<!--
+<div class="section-features">
+    <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+
+        </div>
+    </div>
+</div>
+-->

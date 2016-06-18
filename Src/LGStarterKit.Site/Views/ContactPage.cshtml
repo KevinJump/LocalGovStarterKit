@@ -1,9 +1,11 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
-    Layout = "SideNavPages.cshtml";
+	Layout = "SideNavPages.cshtml";
 }
-<h2 class="page-header">@Umbraco.Field("title")</h2>
-@CurrentPage.GetGridHtml("bodyText", "lgsk-nested-bootstrap")
+
+
+<h2>@Umbraco.Field("title")</h2>
+@CurrentPage.GetGridHtml("content", "lgsk-nested-bootstrap")
 
 
 @Html.Partial("Page/ContactDetails")

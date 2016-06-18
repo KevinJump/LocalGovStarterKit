@@ -1,0 +1,113 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using ClientDependency.Core.Mvc;
+@{
+    Layout = "Master.cshtml";
+
+    Html.RequiresCss("//fonts.googleapis.com/css?family=Roboto:400,700|Ubuntu:400,700", 0);
+    Html.RequiresCss("~/css/layout.css", 1);
+
+    Html.RequiresCss("~/css/" + Umbraco.Field("sectionStylesheet", recursive: true, altText: "lgsk-default.css"));
+}
+<header>
+    @Html.Partial("Page/CookieNotice")
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed"
+                        data-toggle="collapse" data-target="#lgsk-navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="menu-icon-text">menu</span>
+                </button>
+                <a class="navbar-brand" href="/">@Umbraco.Field("siteName", recursive: true)</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="lgsk-navbar-collapse">
+                <form class="navbar-form navbar-right" role="search" method="get" action="/search">
+                    <div class="input-group" >
+                        <label class="sr-only" for="q">Search</label>
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="q"/>
+                        <div class="input-group-btn">
+                            <button type="submit" class="btn btn-default">
+                                <span class="sr-only">Search</span>
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                @Html.Partial("Nav/SiteNav", Model.Content, new ViewDataDictionary() {
+                                                                {  "listClass", "nav navbar-nav navbar-right" }
+                                                            })
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+@if( IsSectionDefined("Breadcrumb"))
+{
+    @RenderSection("Breadcrumb", required: false)
+}
+else
+{
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                @Html.Partial("Nav/Breadcrumb")
+            </div>
+        </div>
+    </div>
+}
+
+@Html.Partial("Components/ServiceAlerts")
+
+@RenderSection("PageHeader", required: false)
+
+<div class="container">
+    <div class="pageContent">
+        @RenderBody()
+    </div>
+</div>
+
+<div class="atoz-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="hidden-xs">
+                    @Html.Partial("Nav/AtoZList")
+                </div>
+                <div class="visible-xs">
+                    <a href="/a-to-z/">A to Z</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+
+    <div class="container">
+        @RenderSection("Footer", required: false)
+
+        <div class="row">
+            <div class="col-sm-6">
+                @Html.Partial("Nav/FooterLinks")
+            </div>
+            <div class="col-sm-6">
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="site-credit">The Localgov Starterkit an open source <span class="jumoo">Jumoo</span> thingy-me-bob</div>
+            </div>
+            <div class="col-xs-6">
+                <div class="site-credit pull-right">
+                    Localgov Starterkit 6, 2015 &raquo; &infin;
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer>
