@@ -141,7 +141,19 @@ namespace Jumoo.StarterKit.Installer
                     {
                         value = MapGuids(value);
                     }
-                    item.SetValue(propTypeAlias, value);
+                    
+                    try
+                    {
+                        item.SetValue(propTypeAlias, value);
+                    }
+                    catch (InvalidOperationException ex)
+                    {
+                        // Some properties try to store a GUID in property marked as type int
+                        // this happens before the GUIDs are mapped back to an int Id
+                        // ignore the exception that Umbraco throws as of version 7.5.0
+                        LogHelper.Info<ContentImporter>(string.Format("Setting a value didn't work. Tried to set value '{0}' to the property '{1}' on content type alias '{2}'. Exception: {3} {4}", 
+                            value, propTypeAlias, item.ContentType.Alias, ex.Message, ex.StackTrace));
+                    }
                 }
             }
         }
