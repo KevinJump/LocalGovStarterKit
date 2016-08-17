@@ -8,6 +8,7 @@ using Umbraco.Core;
 using Umbraco.Core.IO;
 using Umbraco.Core.Models;
 using Umbraco.Core.Services;
+using Umbraco.Core.Logging;
 
 namespace Jumoo.StarterKit.Installer
 {
