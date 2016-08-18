@@ -1,4 +1,4 @@
-﻿<div class="angulargoolemapsConfigIcon" ng-controller="AGM81b046644d304191a1413398692df1d6iconconfig" ng-init="initialize()">
+﻿<div class="angulargoolemapsConfigIcon ng-cloak" ng-controller="agmConfigIcon" ng-init="initialize()">
     <div class="umb-editor">
         <label for="agm_{{model.alias}}_predefine">
             Predefine:
@@ -12,16 +12,16 @@
         <label for="agm_{{model.alias}}_image">
             Image url:
         </label>
-        <input type="url" id="agm_{{model.alias}}_image" ng-model="model.value.image" class="umb-editor" ng-change="predefineIndex = '0'" placeholder="Url" />
+        <input type="text" id="agm_{{model.alias}}_image" ng-model="model.value.image" class="umb-editor" ng-change="predefineIndex = '0'" placeholder="Url" />
     </div>
-
+    <!--
     <div class="umb-editor" style="display:none;">
         <label for="agm_{{model.alias}}_shadow">
             Shadow image url:
         </label>
-        <input type="url" id="agm_{{model.alias}}_shadow" ng-model="model.value.shadowImage" class="umb-editor" ng-change="predefineIndex = '0'" placeholder="Url" />
+        <input type="text" id="agm_{{model.alias}}_shadow" ng-model="model.value.shadowImage" class="umb-editor" ng-change="predefineIndex = '0'" placeholder="Url" />
     </div>
-
+    -->
     <div class="umb-editor">
         <label for="agm_{{model.alias}}_width">
             Width:
@@ -77,17 +77,16 @@
     </div>
     <br />
 
-    <div ng-switch="model.value.image.trim()">
-        <div ng-switch-when="">
-            <div ng-switch="model.value.shadowImage">
-                <span ng-switch-when="">&nbsp;</span>
-                <img ng-switch-default src="{{model.value.shadowImage}}" style="width:{{model.value.size.width}}px;height:{{model.value.size.height}}px;" />
+    <div class="map">
+        <div class="show-icon">
+            <div ng-show="model.value.image.trim() != '' && model.value.shadowImage.trim() != ''">
+                <img ng-src="{{iconUrl(model.value.image)}}" style="width:{{model.value.size.width}}px;height:{{model.value.size.height}}px;background-image:url({{model.value.shadowImage}});background-size:{{model.value.size.width}}px {{model.value.size.height}}px;" />
             </div>
-        </div>
-        <div ng-switch-default>
-            <div ng-switch="model.value.shadowImage">
-                <img ng-switch-when="" src="{{model.value.image}}" style="width:{{model.value.size.width}}px;height:{{model.value.size.height}}px;" />
-                <img ng-switch-default src="{{model.value.image}}" style="width:{{model.value.size.width}}px;height:{{model.value.size.height}}px;background-image:url({{model.value.shadowImage}});background-size:{{model.value.size.width}}px {{model.value.size.height}}px;" />
+            <div ng-show="model.value.image.trim() != '' && model.value.shadowImage.trim() == ''">
+                <img ng-src="{{iconUrl(model.value.image)}}" style="width:{{model.value.size.width}}px;height:{{model.value.size.height}}px;" />
+            </div>
+            <div ng-show="model.value.image.trim() == '' && model.value.shadowImage.trim() != ''">
+                <img ng-src="{{iconUrl(model.value.shadowImage)}}" style="width:{{model.value.size.width}}px;height:{{model.value.size.height}}px;" />
             </div>
         </div>
     </div>

@@ -9,6 +9,13 @@
     width: 98%;
 }
 
+.jumoo-styledText-editor textarea.simple-styledText {
+    height: 5em;
+    border: 0;
+    border-bottom: 1px solid #eee;
+    width: 98%;
+}
+
 .jumoo-styledText-editor .char-warning {
     text-align: right;
     width: 98%;
