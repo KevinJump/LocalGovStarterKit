@@ -22,6 +22,15 @@ namespace Jumoo.StarterKit.Installer {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl contentWarning;
         
         /// <summary>
+        /// contentOptions control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl contentOptions;
+        
+        /// <summary>
         /// btnExampleImport control.
         /// </summary>
         /// <remarks>
@@ -65,6 +74,15 @@ namespace Jumoo.StarterKit.Installer {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbResults;
+        
+        /// <summary>
+        /// lbDone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbDone;
         
         /// <summary>
         /// googletag control.

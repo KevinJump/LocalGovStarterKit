@@ -43,7 +43,7 @@
             </div>
         </div>
     </div>
-    <div class="content-import-options">
+    <div class="content-import-options" runat="server" id="contentOptions">
         <div class="row">
             <div class="span6">
                 <h4><i class="icon-paper-plane"></i> Example Content</h4>
@@ -86,16 +86,22 @@
             <hr />
             <div id="divResults" runat="server" visible="false">
                 <h4><asp:Label ID="lbResults" runat="server"></asp:Label></h4>
+                <a href="/umbraco#/content">view content</a>
             </div>
         </div>
+    </div>
+    <div class="row">
         <div class="span12">
-            <div id="updater" style="display:none">
+            <div id="updater" style="display:none;text-align:center;">
                 <h4>Importing .... <small>(it can take a while)</small></h4>
-                <div class="umb-loader-wrapper">
-                    <div class="umb-loader"></div>
-                </div>
+                <ul class="animated -half-second" style="list-style: none;position:relative;left:45%;">
+                    <li class="umb-load-indicator__bubble"></li>
+                    <li class="umb-load-indicator__bubble"></li>
+                    <li class="umb-load-indicator__bubble"></li>
+                </ul>
             </div>
         </div>
+        <asp:Label ID="lbDone" Visible="false" runat="server"></asp:Label>
     </div>
 </div>
 <div id="googletag" runat="server" visible="false">

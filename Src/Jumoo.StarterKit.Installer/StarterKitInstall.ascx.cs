@@ -33,26 +33,32 @@ namespace Jumoo.StarterKit.Installer
         /// </summary>
         protected void btnExampleImport_Click(object sender, EventArgs e)
         {
+            contentOptions.Visible = false;
             var importer = new ContentImporter();
             var result = importer.ImportContent("example.content");
             divResults.Visible = true; 
             lbResults.Text = string.Format("Example Content Import Complete: {0} items created", result);
+            lbDone.Text = "yes";
         }
 
         protected void btnLgnlImport_Click(object sender, EventArgs e)
         {
+            contentOptions.Visible = false;
             esdImporter importer = new esdImporter();
             var result = importer.Import("navigation_englishAndWelshServices.xml", false);
             divResults.Visible = true;
             lbResults.Text = string.Format("Imported LGNL Structure: {0} items", result);
+            lbDone.Text = "yes";
         }
 
         protected void btnSnlImport_Click(object sender, EventArgs e)
         {
+            contentOptions.Visible = false;
             esdImporter importer = new esdImporter();
             var result = importer.Import("navigation_scottishServices.xml", false);
             divResults.Visible = true;
             lbResults.Text = string.Format("Imported SNL Structure: {0} items", result);
+            lbDone.Text = "yes";
         }
     }
 }
