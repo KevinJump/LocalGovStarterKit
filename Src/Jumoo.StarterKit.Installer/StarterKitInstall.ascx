@@ -86,7 +86,7 @@
             <hr />
             <div id="divResults" runat="server" visible="false">
                 <h4><asp:Label ID="lbResults" runat="server"></asp:Label></h4>
-                <a href="/umbraco#/content">view content</a>
+                <a href="/umbraco#/content" target="_top">view content</a>
             </div>
         </div>
     </div>
